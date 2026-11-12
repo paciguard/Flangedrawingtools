@@ -1,8 +1,9 @@
+using System.Globalization;
 using System.Text.Json.Nodes;
+using FlangeWeb;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
-app.UseDefaultFiles();
-app.UseStaticFiles();
+app.UseDefaultFiles(); app.UseStaticFiles();
 string FileInData(string name) => Path.Combine(app.Environment.ContentRootPath, "Data", name);
 app.MapGet("/api/data", async () => Results.Text(await File.ReadAllTextAsync(FileInData("flanges.json")), "application/json; charset=utf-8"));
 app.MapGet("/api/options", async () => Results.Text(await File.ReadAllTextAsync(FileInData("options.json")), "application/json; charset=utf-8"));
@@ -15,15 +16,9 @@ app.MapGet("/api/lookup", async (string standard, string pressure, string dn, st
     var table = root[sheet]!; var rows = table["rows"]!.AsArray();
     var hits = rows.Where(r => r?[1]?.ToString() == standard && r?[2]?.ToString() == pressure && r?[3]?.ToString() == dn).ToList();
     if (hits.Count != 1) return Results.NotFound(new { error = hits.Count == 0 ? "数据源中没有该组合" : "数据源中存在重复组合" });
-    var row = hits[0]!; double? displayedThickness = null;
-    if (kind == "RF") {
-        int thicknessIndex = type == "整体法兰" ? 9 : 8;
-        if (double.TryParse(row[thicknessIndex]?.ToString(), System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out double thickness)) {
-            if (pressure.StartsWith("Class", StringComparison.OrdinalIgnoreCase)) {
-                if (double.TryParse(row[11]?.ToString(), System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out double faceHeight)) displayedThickness = thickness + faceHeight;
-            } else displayedThickness = thickness;
-        }
-    }
-    return Results.Ok(new { sheet, headers = table["headers"], row, displayedThickness, note = "仅RF厚度试算；数据和绘图尚需核对，不可用于制造" });
+    var row = hits[0]!;
+    decimal? Number(int index) => decimal.TryParse(row[index]?.ToString(), NumberStyles.Float, CultureInfo.InvariantCulture, out var value) ? value : null;
+    var displayedThickness = ThicknessRules.Calculate(standard, pressure, dn, kind, type, Number(8), Number(9), kind == "RF" ? Number(11) : null, kind is "F" or "M" ? Number(23) : null, kind is "F" or "M" ? Number(24) : null, kind == "RJ" ? Number(27) : null);
+    return Results.Ok(new { sheet, headers = table["headers"], row, displayedThickness, note = "尺寸试算待核对，不可用于制造" });
 });
 app.Run();
