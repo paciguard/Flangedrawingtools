@@ -1,0 +1,4094 @@
+{
+  "RF|整体法兰": {
+    "sheet": "突面法兰IF",
+    "image": "image23.png",
+    "annotations": [
+      {
+        "cell": "I31",
+        "x": 0.311495,
+        "y": 0.631575,
+        "width": 0.118045,
+        "height": 0.048473,
+        "formula": "=\"φ\"&I29",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019135
+      },
+      {
+        "cell": "I33",
+        "x": 0.41641,
+        "y": 0.61009,
+        "width": 0.060196,
+        "height": 0.095704,
+        "formula": "=HLOOKUP(I32,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015308
+      },
+      {
+        "cell": "E31",
+        "x": 0.297477,
+        "y": 0.720532,
+        "width": 0.131492,
+        "height": 0.048562,
+        "formula": "=\"φ\"&E29",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019135
+      },
+      {
+        "cell": "E33",
+        "x": 0.4166,
+        "y": 0.698426,
+        "width": 0.060259,
+        "height": 0.095704,
+        "formula": "=HLOOKUP(E32,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015308
+      },
+      {
+        "cell": "C29",
+        "x": 0.328875,
+        "y": 0.537824,
+        "width": 0.179383,
+        "height": 0.048562,
+        "formula": "=HLOOKUP(C28,突面法兰数据源!$A$2:$X$4,2,0)&\"(注1)\"",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.019135
+      },
+      {
+        "cell": "D31",
+        "x": 0.304835,
+        "y": 0.810731,
+        "width": 0.119885,
+        "height": 0.048562,
+        "formula": "=\"φ\"&D29",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019135
+      },
+      {
+        "cell": "D33",
+        "x": 0.403851,
+        "y": 0.778948,
+        "width": 0.085759,
+        "height": 0.113282,
+        "formula": "=HLOOKUP(D32,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015308
+      },
+      {
+        "cell": "F29",
+        "x": 0.101856,
+        "y": 0.16078,
+        "width": 0.15585,
+        "height": 0.048473,
+        "formula": "=HLOOKUP(F28,突面法兰数据源!$A$2:$X$4,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.019135
+      },
+      {
+        "cell": "J29",
+        "x": 0.084032,
+        "y": 0.709257,
+        "width": 0.101426,
+        "height": 0.048562,
+        "formula": "=HLOOKUP(J28,突面法兰数据源!$A$2:$X$4,2,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.019135
+      },
+      {
+        "cell": "J33",
+        "x": 0.105218,
+        "y": 0.54395,
+        "width": 0.058483,
+        "height": 0.10396,
+        "formula": "=HLOOKUP(J32,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.015308
+      },
+      {
+        "cell": "G33",
+        "x": 0.517012,
+        "y": 0.197623,
+        "width": 0.155787,
+        "height": 0.082387,
+        "formula": "=HLOOKUP(G32,公差,2,0)&\"(注3)\"",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.019135
+      },
+      {
+        "cell": "F33",
+        "x": 0.376068,
+        "y": 0.019444,
+        "width": 0.170629,
+        "height": 0.055132,
+        "formula": "=HLOOKUP(F32,公差,2,0)&\"(注2)\"",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.019135
+      },
+      {
+        "cell": "H31",
+        "x": 0.040581,
+        "y": 0.457746,
+        "width": 0.110687,
+        "height": 0.048562,
+        "formula": "=H29+IF(LEFT(B29,5)=\"Class\",J29,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.019135
+      },
+      {
+        "cell": "H33",
+        "x": 0.061197,
+        "y": 0.298387,
+        "width": 0.069711,
+        "height": 0.10396,
+        "formula": "=HLOOKUP(H32,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.015308
+      },
+      {
+        "cell": "C33",
+        "x": 0.726397,
+        "y": 0.325829,
+        "width": 0.148175,
+        "height": 0.040925,
+        "formula": "=HLOOKUP(C32,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.019135
+      }
+    ],
+    "details": [
+      {
+        "image": "image25.png",
+        "x": 0.685935,
+        "y": 0.12457,
+        "width": 0.238225,
+        "height": 0.277929,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
+      }
+    ]
+  },
+  "RF|对焊法兰": {
+    "sheet": "突面法兰WN",
+    "image": "image27.png",
+    "annotations": [
+      {
+        "cell": "L30",
+        "x": 0.282881,
+        "y": 0.558185,
+        "width": 0.119063,
+        "height": 0.046725,
+        "formula": "B",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "I30",
+        "x": 0.273237,
+        "y": 0.6507,
+        "width": 0.129584,
+        "height": 0.046725,
+        "formula": "=\"φ\"&I28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "N30",
+        "x": 0.186848,
+        "y": 0.156806,
+        "width": 0.159452,
+        "height": 0.046555,
+        "formula": "=\"R\"&N28",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "M30",
+        "x": 0.197135,
+        "y": 0.239278,
+        "width": 0.146593,
+        "height": 0.049619,
+        "formula": "=\"R\"&M28",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "F28",
+        "x": 0.107472,
+        "y": 0.224554,
+        "width": 0.175408,
+        "height": 0.046555,
+        "formula": "=HLOOKUP(F27,突面法兰数据源!$A$2:$X$3,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "Q28",
+        "x": 0.463082,
+        "y": 0.046504,
+        "width": 0.07996,
+        "height": 0.06213,
+        "formula": "=HLOOKUP(Q27,突面法兰数据源!$A$2:$X$3,2,0)",
+        "align": "left",
+        "rotation": 270.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "E30",
+        "x": 0.244421,
+        "y": 0.728405,
+        "width": 0.158341,
+        "height": 0.046555,
+        "formula": "=\"φ\"&E28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "L32",
+        "x": 0.386279,
+        "y": 0.525843,
+        "width": 0.065522,
+        "height": 0.102217,
+        "formula": "=HLOOKUP(L31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "J28",
+        "x": 0.072227,
+        "y": 0.516822,
+        "width": 0.141917,
+        "height": 0.046725,
+        "formula": "=HLOOKUP(J27,突面法兰数据源!$A$2:$X$3,2,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "J32",
+        "x": 0.11437,
+        "y": 0.312472,
+        "width": 0.05617,
+        "height": 0.140772,
+        "formula": "=HLOOKUP(J31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "D30",
+        "x": 0.274756,
+        "y": 0.809004,
+        "width": 0.124791,
+        "height": 0.046725,
+        "formula": "=\"φ\"&D28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "K30",
+        "x": 0.287323,
+        "y": 0.029567,
+        "width": 0.114913,
+        "height": 0.046725,
+        "formula": "=\"φ\"&K28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "K32",
+        "x": 0.389201,
+        "y": 0.00114,
+        "width": 0.061372,
+        "height": 0.096089,
+        "formula": "=HLOOKUP(K31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "P30",
+        "x": 0.297377,
+        "y": 0.102761,
+        "width": 0.104859,
+        "height": 0.046725,
+        "formula": "=\"φ\"&P28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "H30",
+        "x": 0.570981,
+        "y": 0.500055,
+        "width": 0.111172,
+        "height": 0.059066,
+        "formula": "=H28+IF(LEFT(B28,5)=\"Class\",J28,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "H32",
+        "x": 0.589802,
+        "y": 0.349836,
+        "width": 0.069614,
+        "height": 0.117196,
+        "formula": "=HLOOKUP(H31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "O30",
+        "x": 0.623644,
+        "y": 0.409243,
+        "width": 0.092293,
+        "height": 0.052853,
+        "formula": "=O28+IF(LEFT(B28,5)=\"Class\",J28,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "O32",
+        "x": 0.634458,
+        "y": 0.2523,
+        "width": 0.071601,
+        "height": 0.146474,
+        "formula": "=HLOOKUP(O31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "P32",
+        "x": 0.395456,
+        "y": 0.06327,
+        "width": 0.049215,
+        "height": 0.124516,
+        "formula": "=HLOOKUP(P31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "I32",
+        "x": 0.38663,
+        "y": 0.632316,
+        "width": 0.065522,
+        "height": 0.087663,
+        "formula": "=HLOOKUP(I31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "E32",
+        "x": 0.386104,
+        "y": 0.709511,
+        "width": 0.065522,
+        "height": 0.087748,
+        "formula": "=HLOOKUP(E31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "D32",
+        "x": 0.38511,
+        "y": 0.789514,
+        "width": 0.065522,
+        "height": 0.087663,
+        "formula": "=HLOOKUP(D31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "R28",
+        "x": 0.697934,
+        "y": 0.435293,
+        "width": 0.103573,
+        "height": 0.036504,
+        "formula": "=公差统计!T4",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019227
+      }
+    ],
+    "details": [
+      {
+        "image": "image26.png",
+        "x": 0.728622,
+        "y": 0.398235,
+        "width": 0.233608,
+        "height": 0.254192,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
+      },
+      {
+        "image": "image25.png",
+        "x": 0.717086,
+        "y": 0.010368,
+        "width": 0.239376,
+        "height": 0.279272,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
+      }
+    ]
+  },
+  "RF|承插焊法兰": {
+    "sheet": "突面法兰SW",
+    "image": "image29.png",
+    "annotations": [
+      {
+        "cell": "L30",
+        "x": 0.287071,
+        "y": 0.538463,
+        "width": 0.098494,
+        "height": 0.049217,
+        "formula": "B",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.020564
+      },
+      {
+        "cell": "L32",
+        "x": 0.364017,
+        "y": 0.503024,
+        "width": 0.070061,
+        "height": 0.111777,
+        "formula": "=HLOOKUP(L31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.016451
+      },
+      {
+        "cell": "I30",
+        "x": 0.197502,
+        "y": 0.648074,
+        "width": 0.192844,
+        "height": 0.049217,
+        "formula": "=\"φ\"&I28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.020564
+      },
+      {
+        "cell": "I32",
+        "x": 0.36644,
+        "y": 0.628405,
+        "width": 0.070061,
+        "height": 0.092368,
+        "formula": "=HLOOKUP(I31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.016451
+      },
+      {
+        "cell": "E30",
+        "x": 0.225871,
+        "y": 0.737843,
+        "width": 0.164475,
+        "height": 0.049217,
+        "formula": "=\"φ\"&E28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.020564
+      },
+      {
+        "cell": "E32",
+        "x": 0.36644,
+        "y": 0.7167,
+        "width": 0.070061,
+        "height": 0.092368,
+        "formula": "=HLOOKUP(E31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.016451
+      },
+      {
+        "cell": "D30",
+        "x": 0.235561,
+        "y": 0.828218,
+        "width": 0.152044,
+        "height": 0.049217,
+        "formula": "=\"φ\"&D28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.020564
+      },
+      {
+        "cell": "D32",
+        "x": 0.365611,
+        "y": 0.808288,
+        "width": 0.070061,
+        "height": 0.092368,
+        "formula": "=HLOOKUP(D31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.016451
+      },
+      {
+        "cell": "H30",
+        "x": 0.56228,
+        "y": 0.503717,
+        "width": 0.155486,
+        "height": 0.061781,
+        "formula": "=H28+IF(LEFT(B28,5)=\"Class\",J28,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.020564
+      },
+      {
+        "cell": "H32",
+        "x": 0.605184,
+        "y": 0.30841,
+        "width": 0.067384,
+        "height": 0.123561,
+        "formula": "=HLOOKUP(H31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.016451
+      },
+      {
+        "cell": "O30",
+        "x": 0.567507,
+        "y": 0.579795,
+        "width": 0.247605,
+        "height": 0.055715,
+        "formula": "=O28+IF(LEFT(B28,5)=\"Class\",J28,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.020564
+      },
+      {
+        "cell": "O32",
+        "x": 0.654462,
+        "y": 0.284755,
+        "width": 0.071081,
+        "height": 0.120702,
+        "formula": "=HLOOKUP(O31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.016451
+      },
+      {
+        "cell": "J28",
+        "x": 0.040295,
+        "y": 0.420188,
+        "width": 0.102892,
+        "height": 0.062301,
+        "formula": "=HLOOKUP(J27,突面法兰数据源!$A$2:$X$3,2,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.020564
+      },
+      {
+        "cell": "J32",
+        "x": 0.063118,
+        "y": 0.263093,
+        "width": 0.057439,
+        "height": 0.113337,
+        "formula": "=HLOOKUP(J31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.016451
+      },
+      {
+        "cell": "N30",
+        "x": 0.456391,
+        "y": 0.108164,
+        "width": 0.185959,
+        "height": 0.057275,
+        "formula": "=\"R\"&N28",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.020564
+      },
+      {
+        "cell": "F28",
+        "x": 0.07523,
+        "y": 0.162927,
+        "width": 0.144075,
+        "height": 0.049217,
+        "formula": "=HLOOKUP(F27,突面法兰数据源!$A$2:$X$3,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.020564
+      },
+      {
+        "cell": "P30",
+        "x": 0.250287,
+        "y": 0.160067,
+        "width": 0.13923,
+        "height": 0.049217,
+        "formula": "B1",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.020564
+      },
+      {
+        "cell": "P32",
+        "x": 0.364081,
+        "y": 0.12792,
+        "width": 0.070444,
+        "height": 0.102852,
+        "formula": "=HLOOKUP(P31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.016451
+      },
+      {
+        "cell": "K30",
+        "x": 0.260615,
+        "y": 0.075844,
+        "width": 0.126671,
+        "height": 0.049217,
+        "formula": "=\"φ\"&K28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.020564
+      },
+      {
+        "cell": "K32",
+        "x": 0.364081,
+        "y": 0.037719,
+        "width": 0.070444,
+        "height": 0.117496,
+        "formula": "=HLOOKUP(K31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.016451
+      },
+      {
+        "cell": "M28",
+        "x": 0.198459,
+        "y": 0.219508,
+        "width": 0.100597,
+        "height": 0.062301,
+        "formula": "=HLOOKUP(M27,突面法兰数据源!$A$2:$X$3,2,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.020564
+      },
+      {
+        "cell": "M32",
+        "x": 0.217074,
+        "y": 0.051409,
+        "width": 0.066619,
+        "height": 0.140718,
+        "formula": "=HLOOKUP(M31,公差,2,0)",
+        "align": "left",
+        "rotation": 270.0,
+        "fontScale": 0.017823
+      }
+    ],
+    "details": [
+      {
+        "image": "image25.png",
+        "x": 0.733229,
+        "y": 0.145213,
+        "width": 0.257056,
+        "height": 0.299899,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
+      }
+    ]
+  },
+  "F|整体法兰": {
+    "sheet": "凹面法兰IF",
+    "image": "image30.png",
+    "annotations": [
+      {
+        "cell": "C29",
+        "x": 0.351371,
+        "y": 0.546562,
+        "width": 0.155731,
+        "height": 0.053272,
+        "formula": "=HLOOKUP(C28,凹凸面法兰数据源!$A$2:$AB$3,2,0)&\"(注1)\"",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.021103
+      },
+      {
+        "cell": "L31",
+        "x": 0.309852,
+        "y": 0.630005,
+        "width": 0.121919,
+        "height": 0.053272,
+        "formula": "=\"φ\"&L29",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021103
+      },
+      {
+        "cell": "L33",
+        "x": 0.422745,
+        "y": 0.599236,
+        "width": 0.071929,
+        "height": 0.112519,
+        "formula": "=HLOOKUP(L32,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.016883
+      },
+      {
+        "cell": "I31",
+        "x": 0.298257,
+        "y": 0.715439,
+        "width": 0.133444,
+        "height": 0.053272,
+        "formula": "=\"φ\"&I29",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021103
+      },
+      {
+        "cell": "I33",
+        "x": 0.41969,
+        "y": 0.686861,
+        "width": 0.078039,
+        "height": 0.117696,
+        "formula": "=HLOOKUP(I32,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.016883
+      },
+      {
+        "cell": "E31",
+        "x": 0.294439,
+        "y": 0.795995,
+        "width": 0.137333,
+        "height": 0.053272,
+        "formula": "=\"φ\"&E29",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021103
+      },
+      {
+        "cell": "E33",
+        "x": 0.420871,
+        "y": 0.769906,
+        "width": 0.075609,
+        "height": 0.11222,
+        "formula": "=HLOOKUP(E32,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.016883
+      },
+      {
+        "cell": "D31",
+        "x": 0.279928,
+        "y": 0.894175,
+        "width": 0.151774,
+        "height": 0.053272,
+        "formula": "=\"φ\"&D29",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021103
+      },
+      {
+        "cell": "D33",
+        "x": 0.422745,
+        "y": 0.86241,
+        "width": 0.071929,
+        "height": 0.119389,
+        "formula": "=HLOOKUP(D32,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.016883
+      },
+      {
+        "cell": "J29",
+        "x": 0.077053,
+        "y": 0.665254,
+        "width": 0.08526,
+        "height": 0.052575,
+        "formula": "=HLOOKUP(J28,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.021103
+      },
+      {
+        "cell": "J33",
+        "x": 0.088023,
+        "y": 0.503147,
+        "width": 0.061793,
+        "height": 0.167683,
+        "formula": "=HLOOKUP(J32,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.016883
+      },
+      {
+        "cell": "K29",
+        "x": 0.448365,
+        "y": 0.374299,
+        "width": 0.036173,
+        "height": 0.053272,
+        "formula": "=HLOOKUP(K28,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.021103
+      },
+      {
+        "cell": "G33",
+        "x": 0.548483,
+        "y": 0.21508,
+        "width": 0.160869,
+        "height": 0.053272,
+        "formula": "=HLOOKUP(G32,公差,2,0)&\"(注3)\"",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.021103
+      },
+      {
+        "cell": "F33",
+        "x": 0.292981,
+        "y": -0.002688,
+        "width": 0.380546,
+        "height": 0.053272,
+        "formula": "=HLOOKUP(F32,公差,2,0)&\"(注2)\"",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.021103
+      },
+      {
+        "cell": "F29",
+        "x": 0.081289,
+        "y": 0.155435,
+        "width": 0.177116,
+        "height": 0.053272,
+        "formula": "=HLOOKUP(F28,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.021103
+      },
+      {
+        "cell": "H31",
+        "x": 0.016371,
+        "y": 0.482536,
+        "width": 0.12914,
+        "height": 0.053272,
+        "formula": "=H29-IF(LEFT(B29,5)=\"Class\",0,J29)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.021103
+      },
+      {
+        "cell": "H33",
+        "x": 0.049004,
+        "y": 0.313758,
+        "width": 0.058252,
+        "height": 0.100072,
+        "formula": "=HLOOKUP(H32,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.016883
+      }
+    ],
+    "details": [
+      {
+        "image": "image25.png",
+        "x": 0.754051,
+        "y": 0.115296,
+        "width": 0.235302,
+        "height": 0.305864,
+        "crop": {
+          "left": 0.06761,
+          "top": 0.0,
+          "right": 0.03487,
+          "bottom": 0.0
+        }
+      }
+    ]
+  },
+  "F|对焊法兰": {
+    "sheet": "凹面法兰WN",
+    "image": "image32.png",
+    "annotations": [
+      {
+        "cell": "T28",
+        "x": 0.645241,
+        "y": 0.482118,
+        "width": 0.063668,
+        "height": 0.030196,
+        "formula": "=公差统计!T4",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.015844
+      },
+      {
+        "cell": "T32",
+        "x": 0.691315,
+        "y": 0.468832,
+        "width": 0.053991,
+        "height": 0.056711,
+        "formula": "=HLOOKUP(T31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012676
+      },
+      {
+        "cell": "K30",
+        "x": 0.264333,
+        "y": 0.570268,
+        "width": 0.108972,
+        "height": 0.050213,
+        "formula": "B",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.015844
+      },
+      {
+        "cell": "S30",
+        "x": 0.247784,
+        "y": 0.646879,
+        "width": 0.129755,
+        "height": 0.050213,
+        "formula": "=\"φ\"&S28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.015844
+      },
+      {
+        "cell": "I30",
+        "x": 0.245364,
+        "y": 0.720238,
+        "width": 0.132174,
+        "height": 0.050213,
+        "formula": "=\"φ\"&I28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.015844
+      },
+      {
+        "cell": "K32",
+        "x": 0.365773,
+        "y": 0.548557,
+        "width": 0.053991,
+        "height": 0.094209,
+        "formula": "=HLOOKUP(K31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012676
+      },
+      {
+        "cell": "E30",
+        "x": 0.241406,
+        "y": 0.802874,
+        "width": 0.136133,
+        "height": 0.050213,
+        "formula": "=\"φ\"&E28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.015844
+      },
+      {
+        "cell": "S32",
+        "x": 0.365773,
+        "y": 0.61962,
+        "width": 0.053991,
+        "height": 0.096983,
+        "formula": "=HLOOKUP(S31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012676
+      },
+      {
+        "cell": "I32",
+        "x": 0.365773,
+        "y": 0.692023,
+        "width": 0.053991,
+        "height": 0.109034,
+        "formula": "=HLOOKUP(I31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012676
+      },
+      {
+        "cell": "E32",
+        "x": 0.365773,
+        "y": 0.775137,
+        "width": 0.053991,
+        "height": 0.105017,
+        "formula": "=HLOOKUP(E31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012676
+      },
+      {
+        "cell": "D30",
+        "x": 0.24278,
+        "y": 0.890006,
+        "width": 0.134758,
+        "height": 0.050213,
+        "formula": "=\"φ\"&D28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.015844
+      },
+      {
+        "cell": "D32",
+        "x": 0.365773,
+        "y": 0.864086,
+        "width": 0.053991,
+        "height": 0.106165,
+        "formula": "=HLOOKUP(D31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012676
+      },
+      {
+        "cell": "O30",
+        "x": 0.240471,
+        "y": 0.106586,
+        "width": 0.137123,
+        "height": 0.050213,
+        "formula": "=\"φ\"&O28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.015844
+      },
+      {
+        "cell": "O32",
+        "x": 0.365773,
+        "y": 0.079423,
+        "width": 0.053991,
+        "height": 0.094209,
+        "formula": "=HLOOKUP(O31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012676
+      },
+      {
+        "cell": "J30",
+        "x": 0.254986,
+        "y": 0.030166,
+        "width": 0.122608,
+        "height": 0.050213,
+        "formula": "=\"φ\"&J28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.015844
+      },
+      {
+        "cell": "J32",
+        "x": 0.365773,
+        "y": 0.004055,
+        "width": 0.053991,
+        "height": 0.094209,
+        "formula": "=HLOOKUP(J31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012676
+      },
+      {
+        "cell": "Q28",
+        "x": 0.120887,
+        "y": 0.420011,
+        "width": 0.047009,
+        "height": 0.050213,
+        "formula": "=HLOOKUP(Q27,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.015844
+      },
+      {
+        "cell": "Q32",
+        "x": 0.120942,
+        "y": 0.303899,
+        "width": 0.045084,
+        "height": 0.094209,
+        "formula": "=HLOOKUP(Q31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.012676
+      },
+      {
+        "cell": "F28",
+        "x": 0.146344,
+        "y": 0.223558,
+        "width": 0.088245,
+        "height": 0.050213,
+        "formula": "=HLOOKUP(F27,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015844
+      },
+      {
+        "cell": "L30",
+        "x": 0.192308,
+        "y": 0.186448,
+        "width": 0.119584,
+        "height": 0.054039,
+        "formula": "=\"R\"&L28",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012676
+      },
+      {
+        "cell": "M30",
+        "x": 0.179002,
+        "y": 0.114333,
+        "width": 0.146304,
+        "height": 0.053082,
+        "formula": "=\"R\"&M28",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012676
+      },
+      {
+        "cell": "P28",
+        "x": 0.454017,
+        "y": 0.078658,
+        "width": 0.061304,
+        "height": 0.050213,
+        "formula": "=HLOOKUP(P27,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.015844
+      },
+      {
+        "cell": "H30",
+        "x": 0.520874,
+        "y": 0.597431,
+        "width": 0.142236,
+        "height": 0.050213,
+        "formula": "=H28-IF(LEFT(B28,5)=\"Class\",0,Q28)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.015844
+      },
+      {
+        "cell": "H32",
+        "x": 0.572226,
+        "y": 0.357556,
+        "width": 0.040906,
+        "height": 0.118599,
+        "formula": "=HLOOKUP(H31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.012676
+      },
+      {
+        "cell": "N30",
+        "x": 0.579154,
+        "y": 0.476154,
+        "width": 0.140531,
+        "height": 0.049257,
+        "formula": "=N28-IF(LEFT(B28,5)=\"Class\",0,Q28)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.015844
+      },
+      {
+        "cell": "N32",
+        "x": 0.625558,
+        "y": 0.194483,
+        "width": 0.049428,
+        "height": 0.190523,
+        "formula": "=HLOOKUP(N31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.012676
+      },
+      {
+        "cell": "R28",
+        "x": 0.369951,
+        "y": 0.449087,
+        "width": 0.047064,
+        "height": 0.050213,
+        "formula": "=HLOOKUP(R27,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.015844
+      },
+      {
+        "cell": "R32",
+        "x": 0.371051,
+        "y": 0.339192,
+        "width": 0.040906,
+        "height": 0.115921,
+        "formula": "=HLOOKUP(R31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.012676
+      },
+      {
+        "cell": "C32",
+        "x": 0.694504,
+        "y": 0.181503,
+        "width": 0.105619,
+        "height": 0.034987,
+        "formula": "=HLOOKUP(C31,公差,2,0)",
+        "align": "left",
+        "rotation": 0.0,
+        "fontScale": 0.015844
+      }
+    ],
+    "details": [
+      {
+        "image": "image26.png",
+        "x": 0.651426,
+        "y": 0.451872,
+        "width": 0.193305,
+        "height": 0.210338,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
+      },
+      {
+        "image": "image25.png",
+        "x": 0.665686,
+        "y": 0.034911,
+        "width": 0.175876,
+        "height": 0.205189,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
+      }
+    ]
+  },
+  "F|承插焊法兰": {
+    "sheet": "凹面法兰SW",
+    "image": "image33.png",
+    "annotations": [
+      {
+        "cell": "K30",
+        "x": 0.308182,
+        "y": 0.500183,
+        "width": 0.134117,
+        "height": 0.056135,
+        "formula": "B",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.017722
+      },
+      {
+        "cell": "R30",
+        "x": 0.321824,
+        "y": 0.59866,
+        "width": 0.122655,
+        "height": 0.056135,
+        "formula": "=\"φ\"&R28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.017722
+      },
+      {
+        "cell": "I30",
+        "x": 0.330732,
+        "y": 0.686431,
+        "width": 0.111691,
+        "height": 0.056135,
+        "formula": "=\"φ\"&I28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.017722
+      },
+      {
+        "cell": "K32",
+        "x": 0.425791,
+        "y": 0.458226,
+        "width": 0.060362,
+        "height": 0.131271,
+        "formula": "=HLOOKUP(K31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.014178
+      },
+      {
+        "cell": "E30",
+        "x": 0.305628,
+        "y": 0.781822,
+        "width": 0.138041,
+        "height": 0.056135,
+        "formula": "=\"φ\"&E28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.017722
+      },
+      {
+        "cell": "R32",
+        "x": 0.425791,
+        "y": 0.560658,
+        "width": 0.060362,
+        "height": 0.122205,
+        "formula": "=HLOOKUP(R31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.014178
+      },
+      {
+        "cell": "I32",
+        "x": 0.425916,
+        "y": 0.656917,
+        "width": 0.060362,
+        "height": 0.11854,
+        "formula": "=HLOOKUP(I31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.014178
+      },
+      {
+        "cell": "E32",
+        "x": 0.428096,
+        "y": 0.752694,
+        "width": 0.060362,
+        "height": 0.11661,
+        "formula": "=HLOOKUP(E31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.014178
+      },
+      {
+        "cell": "D30",
+        "x": 0.28096,
+        "y": 0.873066,
+        "width": 0.162398,
+        "height": 0.056328,
+        "formula": "=\"φ\"&D28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.017722
+      },
+      {
+        "cell": "D32",
+        "x": 0.426539,
+        "y": 0.847988,
+        "width": 0.060362,
+        "height": 0.105808,
+        "formula": "=HLOOKUP(D31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.014178
+      },
+      {
+        "cell": "P28",
+        "x": 0.152574,
+        "y": 0.350875,
+        "width": 0.052575,
+        "height": 0.056328,
+        "formula": "=HLOOKUP(P27,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.017722
+      },
+      {
+        "cell": "P32",
+        "x": 0.150332,
+        "y": 0.216421,
+        "width": 0.055005,
+        "height": 0.129631,
+        "formula": "=HLOOKUP(P31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.014178
+      },
+      {
+        "cell": "Q28",
+        "x": 0.436443,
+        "y": 0.356566,
+        "width": 0.052638,
+        "height": 0.055556,
+        "formula": "=HLOOKUP(Q27,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.017722
+      },
+      {
+        "cell": "Q32",
+        "x": 0.438001,
+        "y": 0.231757,
+        "width": 0.045785,
+        "height": 0.135129,
+        "formula": "=HLOOKUP(Q31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.015359
+      },
+      {
+        "cell": "O30",
+        "x": 0.352846,
+        "y": 0.109263,
+        "width": 0.096056,
+        "height": 0.056328,
+        "formula": "B1",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.017722
+      },
+      {
+        "cell": "O32",
+        "x": 0.42766,
+        "y": 0.072418,
+        "width": 0.060362,
+        "height": 0.119697,
+        "formula": "=HLOOKUP(O31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.014178
+      },
+      {
+        "cell": "J30",
+        "x": 0.331417,
+        "y": 0.014064,
+        "width": 0.118232,
+        "height": 0.056328,
+        "formula": "=\"φ\"&J28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.017722
+      },
+      {
+        "cell": "J32",
+        "x": 0.429529,
+        "y": -0.026156,
+        "width": 0.060424,
+        "height": 0.133007,
+        "formula": "=HLOOKUP(J31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.014178
+      },
+      {
+        "cell": "F28",
+        "x": 0.148525,
+        "y": 0.117847,
+        "width": 0.165762,
+        "height": 0.056135,
+        "formula": "=HLOOKUP(F27,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017722
+      },
+      {
+        "cell": "L28",
+        "x": 0.295537,
+        "y": 0.149772,
+        "width": 0.052638,
+        "height": 0.056135,
+        "formula": "=HLOOKUP(L27,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.017722
+      },
+      {
+        "cell": "L32",
+        "x": 0.294789,
+        "y": -0.003393,
+        "width": 0.054756,
+        "height": 0.159628,
+        "formula": "=HLOOKUP(L31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.014178
+      },
+      {
+        "cell": "M30",
+        "x": 0.513188,
+        "y": 0.0702,
+        "width": 0.131812,
+        "height": 0.064044,
+        "formula": "=\"R\"&M28",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017722
+      },
+      {
+        "cell": "H30",
+        "x": 0.612857,
+        "y": 0.522945,
+        "width": 0.147946,
+        "height": 0.056328,
+        "formula": "=H28-IF(LEFT(B28,5)=\"Class\",0,P28)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.017722
+      },
+      {
+        "cell": "H32",
+        "x": 0.664249,
+        "y": 0.276703,
+        "width": 0.049585,
+        "height": 0.117382,
+        "formula": "=HLOOKUP(H31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.014178
+      },
+      {
+        "cell": "N30",
+        "x": 0.659639,
+        "y": 0.509538,
+        "width": 0.182705,
+        "height": 0.056328,
+        "formula": "=N28-IF(LEFT(B28,5)=\"Class\",0,P28)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.017722
+      },
+      {
+        "cell": "N32",
+        "x": 0.728099,
+        "y": 0.215649,
+        "width": 0.045785,
+        "height": 0.12124,
+        "formula": "=HLOOKUP(N31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.014178
+      },
+      {
+        "cell": "C32",
+        "x": 0.800172,
+        "y": 0.265373,
+        "width": 0.127514,
+        "height": 0.034821,
+        "formula": "=HLOOKUP(C31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017722
+      }
+    ],
+    "details": [
+      {
+        "image": "image25.png",
+        "x": 0.768808,
+        "y": 0.086472,
+        "width": 0.197601,
+        "height": 0.248748,
+        "crop": {
+          "left": 0.037,
+          "top": 0.0,
+          "right": 0.03622,
+          "bottom": 0.0
+        }
+      }
+    ]
+  },
+  "M|整体法兰": {
+    "sheet": "凸面法兰IF",
+    "image": "image34.png",
+    "annotations": [
+      {
+        "cell": "I29",
+        "x": 0.040311,
+        "y": 0.788107,
+        "width": 0.177916,
+        "height": 0.054275,
+        "formula": "=HLOOKUP(I28,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.021196
+      },
+      {
+        "cell": "I33",
+        "x": 0.096539,
+        "y": 0.533148,
+        "width": 0.062267,
+        "height": 0.125914,
+        "formula": "=HLOOKUP(I32,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.016956
+      },
+      {
+        "cell": "H31",
+        "x": 0.017334,
+        "y": 0.470428,
+        "width": 0.128074,
+        "height": 0.05418,
+        "formula": "=H29-IF(LEFT(B29,5)=\"Class\",0,I29)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.021196
+      },
+      {
+        "cell": "H33",
+        "x": 0.048224,
+        "y": 0.281605,
+        "width": 0.059421,
+        "height": 0.119367,
+        "formula": "=HLOOKUP(H32,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.016956
+      },
+      {
+        "cell": "C29",
+        "x": 0.347898,
+        "y": 0.555921,
+        "width": 0.183122,
+        "height": 0.054275,
+        "formula": "=HLOOKUP(C28,凹凸面法兰数据源!$A$2:$AB$3,2,0)&\"(注1)\"",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.021196
+      },
+      {
+        "cell": "J31",
+        "x": 0.270636,
+        "y": 0.661719,
+        "width": 0.171321,
+        "height": 0.054275,
+        "formula": "=\"φ\"&J29",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021196
+      },
+      {
+        "cell": "J33",
+        "x": 0.42974,
+        "y": 0.624713,
+        "width": 0.072194,
+        "height": 0.119936,
+        "formula": "=HLOOKUP(J32,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.016956
+      },
+      {
+        "cell": "E31",
+        "x": 0.285492,
+        "y": 0.762582,
+        "width": 0.156466,
+        "height": 0.054275,
+        "formula": "=\"φ\"&E29",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021196
+      },
+      {
+        "cell": "E33",
+        "x": 0.42974,
+        "y": 0.730416,
+        "width": 0.072194,
+        "height": 0.121359,
+        "formula": "=HLOOKUP(E32,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.016956
+      },
+      {
+        "cell": "D31",
+        "x": 0.27015,
+        "y": 0.865249,
+        "width": 0.171807,
+        "height": 0.054275,
+        "formula": "=\"φ\"&D29",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021196
+      },
+      {
+        "cell": "D33",
+        "x": 0.42974,
+        "y": 0.838396,
+        "width": 0.072194,
+        "height": 0.111112,
+        "formula": "=HLOOKUP(D32,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.016956
+      },
+      {
+        "cell": "C33",
+        "x": 0.768495,
+        "y": 0.405304,
+        "width": 0.14529,
+        "height": 0.044926,
+        "formula": "=HLOOKUP(C32,公差,2,0)",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021196
+      },
+      {
+        "cell": "G33",
+        "x": 0.583152,
+        "y": 0.200193,
+        "width": 0.112317,
+        "height": 0.054275,
+        "formula": "=HLOOKUP(G32,公差,2,0)&\"(注3)\"",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.021196
+      },
+      {
+        "cell": "F33",
+        "x": 0.408707,
+        "y": -0.018804,
+        "width": 0.152579,
+        "height": 0.054275,
+        "formula": "=HLOOKUP(F32,公差,2,0)&\"(注2)\"",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.021196
+      },
+      {
+        "cell": "F29",
+        "x": 0.072798,
+        "y": 0.15683,
+        "width": 0.2036,
+        "height": 0.05418,
+        "formula": "=HLOOKUP(F28,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.021196
+      }
+    ],
+    "details": [
+      {
+        "image": "image25.png",
+        "x": 0.721818,
+        "y": 0.180203,
+        "width": 0.246934,
+        "height": 0.31085,
+        "crop": {
+          "left": 0.037,
+          "top": 0.0,
+          "right": 0.03622,
+          "bottom": 0.0
+        }
+      }
+    ]
+  },
+  "M|对焊法兰": {
+    "sheet": "凸面法兰WN",
+    "image": "image27.png",
+    "annotations": [
+      {
+        "cell": "R28",
+        "x": 0.731777,
+        "y": 0.448351,
+        "width": 0.077212,
+        "height": 0.036448,
+        "formula": "=公差统计!T4",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "J30",
+        "x": 0.280777,
+        "y": 0.563036,
+        "width": 0.114504,
+        "height": 0.046725,
+        "formula": "B",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "Q30",
+        "x": 0.281361,
+        "y": 0.65104,
+        "width": 0.113978,
+        "height": 0.046555,
+        "formula": "=\"φ\"&Q28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "J32",
+        "x": 0.381194,
+        "y": 0.528226,
+        "width": 0.065581,
+        "height": 0.103324,
+        "formula": "=HLOOKUP(J31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "E30",
+        "x": 0.289018,
+        "y": 0.726533,
+        "width": 0.106262,
+        "height": 0.046725,
+        "formula": "=\"φ\"&E28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "Q32",
+        "x": 0.380025,
+        "y": 0.618783,
+        "width": 0.065522,
+        "height": 0.101111,
+        "formula": "=HLOOKUP(Q31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "E32",
+        "x": 0.380025,
+        "y": 0.699978,
+        "width": 0.065522,
+        "height": 0.100004,
+        "formula": "=HLOOKUP(E31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "D30",
+        "x": 0.268502,
+        "y": 0.811132,
+        "width": 0.126778,
+        "height": 0.046725,
+        "formula": "=\"φ\"&D28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "D32",
+        "x": 0.380025,
+        "y": 0.775811,
+        "width": 0.065522,
+        "height": 0.12009,
+        "formula": "=HLOOKUP(D31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "F28",
+        "x": 0.118169,
+        "y": 0.226171,
+        "width": 0.148989,
+        "height": 0.046725,
+        "formula": "=HLOOKUP(F27,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "N30",
+        "x": 0.251026,
+        "y": 0.102932,
+        "width": 0.15951,
+        "height": 0.046555,
+        "formula": "=\"φ\"&N28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "N32",
+        "x": 0.386337,
+        "y": 0.081058,
+        "width": 0.065522,
+        "height": 0.087663,
+        "formula": "=HLOOKUP(N31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "I30",
+        "x": 0.219813,
+        "y": 0.028035,
+        "width": 0.189846,
+        "height": 0.046555,
+        "formula": "=\"φ\"&I28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "I32",
+        "x": 0.387331,
+        "y": 0.000715,
+        "width": 0.065522,
+        "height": 0.097706,
+        "formula": "=HLOOKUP(I31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "K30",
+        "x": 0.202454,
+        "y": 0.239023,
+        "width": 0.132155,
+        "height": 0.053024,
+        "formula": "=\"R\"&K28",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "L30",
+        "x": 0.201285,
+        "y": 0.156466,
+        "width": 0.13011,
+        "height": 0.054385,
+        "formula": "=\"R\"&L28",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "P28",
+        "x": 0.102796,
+        "y": 0.470692,
+        "width": 0.086214,
+        "height": 0.046725,
+        "formula": "=HLOOKUP(P27,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "P32",
+        "x": 0.121033,
+        "y": 0.340899,
+        "width": 0.049683,
+        "height": 0.106047,
+        "formula": "=HLOOKUP(P31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "O28",
+        "x": 0.471557,
+        "y": 0.081909,
+        "width": 0.065932,
+        "height": 0.052683,
+        "formula": "=HLOOKUP(O27,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "H30",
+        "x": 0.566948,
+        "y": 0.530609,
+        "width": 0.122979,
+        "height": 0.046725,
+        "formula": "=H28+IF(LEFT(B28,5)=\"Class\",P28,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "H32",
+        "x": 0.598043,
+        "y": 0.36856,
+        "width": 0.058625,
+        "height": 0.092855,
+        "formula": "=HLOOKUP(H31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.015382
+      },
+      {
+        "cell": "M30",
+        "x": 0.617156,
+        "y": 0.422009,
+        "width": 0.108834,
+        "height": 0.046045,
+        "formula": "=M28+IF(LEFT(B28,5)=\"Class\",P28,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.019227
+      },
+      {
+        "cell": "M32",
+        "x": 0.643284,
+        "y": 0.230597,
+        "width": 0.058333,
+        "height": 0.144942,
+        "formula": "=HLOOKUP(M31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.015382
+      }
+    ],
+    "details": [
+      {
+        "image": "image26.png",
+        "x": 0.735352,
+        "y": 0.409264,
+        "width": 0.234569,
+        "height": 0.255238,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
+      },
+      {
+        "image": "image25.png",
+        "x": 0.736313,
+        "y": 0.028751,
+        "width": 0.22111,
+        "height": 0.257962,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
+      }
+    ]
+  },
+  "M|承插焊法兰": {
+    "sheet": "凸面法兰SW",
+    "image": "image35.png",
+    "annotations": [
+      {
+        "cell": "J30",
+        "x": 0.275898,
+        "y": 0.541489,
+        "width": 0.113502,
+        "height": 0.051558,
+        "formula": "B",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021549
+      },
+      {
+        "cell": "Q30",
+        "x": 0.252246,
+        "y": 0.653153,
+        "width": 0.139912,
+        "height": 0.051558,
+        "formula": "=\"φ\"&Q28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021549
+      },
+      {
+        "cell": "J32",
+        "x": 0.372712,
+        "y": 0.515942,
+        "width": 0.073507,
+        "height": 0.0968,
+        "formula": "=HLOOKUP(J31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017239
+      },
+      {
+        "cell": "E30",
+        "x": 0.230732,
+        "y": 0.748094,
+        "width": 0.161426,
+        "height": 0.051373,
+        "formula": "=\"φ\"&E28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021549
+      },
+      {
+        "cell": "Q32",
+        "x": 0.374574,
+        "y": 0.626862,
+        "width": 0.073438,
+        "height": 0.0968,
+        "formula": "=HLOOKUP(Q31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017239
+      },
+      {
+        "cell": "E32",
+        "x": 0.375884,
+        "y": 0.724963,
+        "width": 0.073507,
+        "height": 0.096707,
+        "formula": "=HLOOKUP(E31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017239
+      },
+      {
+        "cell": "D30",
+        "x": 0.214458,
+        "y": 0.842107,
+        "width": 0.176527,
+        "height": 0.051558,
+        "formula": "=\"φ\"&D28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021549
+      },
+      {
+        "cell": "D32",
+        "x": 0.375884,
+        "y": 0.82167,
+        "width": 0.080058,
+        "height": 0.0968,
+        "formula": "=HLOOKUP(D31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017239
+      },
+      {
+        "cell": "O30",
+        "x": 0.313272,
+        "y": 0.14435,
+        "width": 0.080885,
+        "height": 0.051373,
+        "formula": "B1",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021549
+      },
+      {
+        "cell": "O32",
+        "x": 0.367747,
+        "y": 0.121497,
+        "width": 0.073438,
+        "height": 0.0968,
+        "formula": "=HLOOKUP(O31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017239
+      },
+      {
+        "cell": "I30",
+        "x": 0.313893,
+        "y": 0.058234,
+        "width": 0.080885,
+        "height": 0.051373,
+        "formula": "=\"φ\"&I28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021549
+      },
+      {
+        "cell": "I32",
+        "x": 0.368989,
+        "y": 0.028321,
+        "width": 0.073438,
+        "height": 0.107669,
+        "formula": "=HLOOKUP(I31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017239
+      },
+      {
+        "cell": "L30",
+        "x": 0.443323,
+        "y": 0.096601,
+        "width": 0.249621,
+        "height": 0.051558,
+        "formula": "=\"R\"&L28",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017239
+      },
+      {
+        "cell": "K28",
+        "x": 0.172257,
+        "y": 0.262145,
+        "width": 0.164115,
+        "height": 0.051558,
+        "formula": "=HLOOKUP(K27,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.021549
+      },
+      {
+        "cell": "K32",
+        "x": 0.218251,
+        "y": 0.049316,
+        "width": 0.072197,
+        "height": 0.119374,
+        "formula": "=HLOOKUP(K31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.017239
+      },
+      {
+        "cell": "F28",
+        "x": 0.070961,
+        "y": 0.146208,
+        "width": 0.155772,
+        "height": 0.056296,
+        "formula": "=HLOOKUP(F27,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.021549
+      },
+      {
+        "cell": "H30",
+        "x": 0.591854,
+        "y": 0.545577,
+        "width": 0.157633,
+        "height": 0.051373,
+        "formula": "=H28-IF(LEFT(B28,5)=\"Class\",0,P28)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.021549
+      },
+      {
+        "cell": "H32",
+        "x": 0.633986,
+        "y": 0.339343,
+        "width": 0.072197,
+        "height": 0.107111,
+        "formula": "=HLOOKUP(H31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.017239
+      },
+      {
+        "cell": "M30",
+        "x": 0.634952,
+        "y": 0.468657,
+        "width": 0.183699,
+        "height": 0.051558,
+        "formula": "=M28-IF(LEFT(B28,5)=\"Class\",0,P28)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.021549
+      },
+      {
+        "cell": "M32",
+        "x": 0.69122,
+        "y": 0.244959,
+        "width": 0.072266,
+        "height": 0.111942,
+        "formula": "=HLOOKUP(M31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.017239
+      },
+      {
+        "cell": "P28",
+        "x": 0.046206,
+        "y": 0.417749,
+        "width": 0.09447,
+        "height": 0.051558,
+        "formula": "=HLOOKUP(P27,凹凸面法兰数据源!$A$2:$AB$3,2,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.021549
+      },
+      {
+        "cell": "P32",
+        "x": 0.058549,
+        "y": 0.26809,
+        "width": 0.072197,
+        "height": 0.0968,
+        "formula": "=HLOOKUP(P31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.017239
+      }
+    ],
+    "details": [
+      {
+        "image": "image25.png",
+        "x": 0.763908,
+        "y": 0.180726,
+        "width": 0.30707,
+        "height": 0.358248,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
+      }
+    ]
+  },
+  "RJ|整体法兰": {
+    "sheet": "环连接面法兰IF",
+    "image": "image36.png",
+    "annotations": [
+      {
+        "cell": "C29",
+        "x": 0.301836,
+        "y": 0.484004,
+        "width": 0.126262,
+        "height": 0.052071,
+        "formula": "=HLOOKUP(C28,环连接面法兰数据源!$A$2:$AA$3,2,0)&\"(注1)\"",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.019469
+      },
+      {
+        "cell": "K31",
+        "x": 0.232431,
+        "y": 0.567386,
+        "width": 0.137772,
+        "height": 0.052242,
+        "formula": "=\"φ\"&K29",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019469
+      },
+      {
+        "cell": "K33",
+        "x": 0.354366,
+        "y": 0.54586,
+        "width": 0.06629,
+        "height": 0.098102,
+        "formula": "=HLOOKUP(K32,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015575
+      },
+      {
+        "cell": "I31",
+        "x": 0.233902,
+        "y": 0.646089,
+        "width": 0.133099,
+        "height": 0.052242,
+        "formula": "=\"φ\"&I29",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019469
+      },
+      {
+        "cell": "I33",
+        "x": 0.354366,
+        "y": 0.623201,
+        "width": 0.06629,
+        "height": 0.098102,
+        "formula": "=HLOOKUP(I32,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015575
+      },
+      {
+        "cell": "E31",
+        "x": 0.194527,
+        "y": 0.721643,
+        "width": 0.172561,
+        "height": 0.052242,
+        "formula": "=\"φ\"&E29",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019469
+      },
+      {
+        "cell": "E33",
+        "x": 0.354366,
+        "y": 0.701819,
+        "width": 0.06629,
+        "height": 0.097932,
+        "formula": "=HLOOKUP(E32,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015575
+      },
+      {
+        "cell": "D31",
+        "x": 0.199113,
+        "y": 0.805111,
+        "width": 0.16633,
+        "height": 0.052242,
+        "formula": "=\"φ\"&D29",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019469
+      },
+      {
+        "cell": "D33",
+        "x": 0.354366,
+        "y": 0.782138,
+        "width": 0.06629,
+        "height": 0.097932,
+        "formula": "=HLOOKUP(D32,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015575
+      },
+      {
+        "cell": "G33",
+        "x": 0.421261,
+        "y": 0.189528,
+        "width": 0.220331,
+        "height": 0.052242,
+        "formula": "=HLOOKUP(G32,公差,2,0)&\"(注3)\"",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.019469
+      },
+      {
+        "cell": "F33",
+        "x": 0.328058,
+        "y": 0.00898,
+        "width": 0.16183,
+        "height": 0.052071,
+        "formula": "=HLOOKUP(F32,公差,2,0)&\"(注2)\"",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.019469
+      },
+      {
+        "cell": "H31",
+        "x": -0.005381,
+        "y": 0.405982,
+        "width": 0.115271,
+        "height": 0.052242,
+        "formula": "=IF(AND(OR(A29=\"GB9124.1-19\",A29=\"HG20592-09\"),后台数据!B5=\"DN125\"),H29,H29-IF(LEFT(B29,5)=\"Class\",0,O29))",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.019469
+      },
+      {
+        "cell": "H33",
+        "x": 0.022572,
+        "y": 0.239642,
+        "width": 0.056943,
+        "height": 0.097932,
+        "formula": "=HLOOKUP(H32,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.015575
+      },
+      {
+        "cell": "F29",
+        "x": 0.048447,
+        "y": 0.163322,
+        "width": 0.157416,
+        "height": 0.052242,
+        "formula": "=HLOOKUP(F28,环连接面法兰数据源!$A$2:$AA$3,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.019469
+      },
+      {
+        "cell": "O33",
+        "x": 0.019197,
+        "y": 0.674251,
+        "width": 0.156032,
+        "height": 0.051476,
+        "formula": "=IF(输入界面!$A$9=\"GOST33259-15\",O29,L29)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.019469
+      },
+      {
+        "cell": "N33",
+        "x": 0.071986,
+        "y": 0.445205,
+        "width": 0.05028,
+        "height": 0.118947,
+        "formula": "=IF(输入界面!$A$9=\"GOST33259-15\",O31,L33)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.015575
+      },
+      {
+        "cell": "J29",
+        "x": 0.652064,
+        "y": 0.091596,
+        "width": 0.073126,
+        "height": 0.052242,
+        "formula": "=HLOOKUP(J28,环连接面法兰数据源!$A$2:$AA$3,2,0)",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019469
+      },
+      {
+        "cell": "J33",
+        "x": 0.698363,
+        "y": 0.068538,
+        "width": 0.06629,
+        "height": 0.097932,
+        "formula": "=HLOOKUP(J32,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015575
+      },
+      {
+        "cell": "M29",
+        "x": 0.715584,
+        "y": 0.541095,
+        "width": 0.07278,
+        "height": 0.052242,
+        "formula": "=HLOOKUP(M28,环连接面法兰数据源!$A$2:$AA$3,2,0)",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019469
+      },
+      {
+        "cell": "M33",
+        "x": 0.764912,
+        "y": 0.518122,
+        "width": 0.06629,
+        "height": 0.097932,
+        "formula": "=HLOOKUP(M32,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015575
+      },
+      {
+        "cell": "N29",
+        "x": 0.825663,
+        "y": 0.639452,
+        "width": 0.093463,
+        "height": 0.052242,
+        "formula": "23°±0.5°",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.019469
+      },
+      {
+        "cell": "R31",
+        "x": 0.868673,
+        "y": 0.306518,
+        "width": 0.15508,
+        "height": 0.052242,
+        "formula": "=R29-IF(LEFT(B29,5)=\"Class\",0,O29)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.019469
+      },
+      {
+        "cell": "O33",
+        "x": 0.914193,
+        "y": 0.660723,
+        "width": 0.143656,
+        "height": 0.052752,
+        "formula": "=IF(输入界面!$A$9=\"GOST33259-15\",O29,L29)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.019469
+      },
+      {
+        "cell": "N33",
+        "x": 0.956944,
+        "y": 0.4652,
+        "width": 0.050193,
+        "height": 0.105759,
+        "formula": "=IF(输入界面!$A$9=\"GOST33259-15\",O31,L33)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.015575
+      },
+      {
+        "cell": "L29",
+        "x": 0.845394,
+        "y": 0.326428,
+        "width": 0.07754,
+        "height": 0.052242,
+        "formula": "=HLOOKUP(L28,环连接面法兰数据源!$A$2:$AA$3,2,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.019469
+      },
+      {
+        "cell": "L33",
+        "x": 0.854567,
+        "y": 0.208587,
+        "width": 0.05028,
+        "height": 0.098102,
+        "formula": "=HLOOKUP(L32,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.015575
+      }
+    ]
+  },
+  "RJ|对焊法兰": {
+    "sheet": "环连接面法兰WN",
+    "image": "image38.png",
+    "annotations": [
+      {
+        "cell": "R30",
+        "x": 0.227092,
+        "y": 0.626886,
+        "width": 0.166852,
+        "height": 0.046723,
+        "formula": "=\"φ\"&R28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.015902
+      },
+      {
+        "cell": "I30",
+        "x": 0.219307,
+        "y": 0.694563,
+        "width": 0.174637,
+        "height": 0.046723,
+        "formula": "=\"φ\"&I28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.015902
+      },
+      {
+        "cell": "E30",
+        "x": 0.226022,
+        "y": 0.763755,
+        "width": 0.167922,
+        "height": 0.046901,
+        "formula": "=\"φ\"&E28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.015902
+      },
+      {
+        "cell": "R32",
+        "x": 0.383142,
+        "y": 0.608072,
+        "width": 0.053866,
+        "height": 0.088007,
+        "formula": "=HLOOKUP(R31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012721
+      },
+      {
+        "cell": "D30",
+        "x": 0.24349,
+        "y": 0.833662,
+        "width": 0.150502,
+        "height": 0.046723,
+        "formula": "=\"φ\"&D28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.015902
+      },
+      {
+        "cell": "I32",
+        "x": 0.382996,
+        "y": 0.674054,
+        "width": 0.054157,
+        "height": 0.088007,
+        "formula": "=HLOOKUP(I31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012721
+      },
+      {
+        "cell": "E32",
+        "x": 0.382996,
+        "y": 0.745031,
+        "width": 0.054157,
+        "height": 0.088096,
+        "formula": "=HLOOKUP(E31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012721
+      },
+      {
+        "cell": "D32",
+        "x": 0.382996,
+        "y": 0.816809,
+        "width": 0.054157,
+        "height": 0.088096,
+        "formula": "=HLOOKUP(D31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012721
+      },
+      {
+        "cell": "K30",
+        "x": 0.300227,
+        "y": 0.555731,
+        "width": 0.093279,
+        "height": 0.046901,
+        "formula": "B",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.015902
+      },
+      {
+        "cell": "K32",
+        "x": 0.38319,
+        "y": 0.535134,
+        "width": 0.045156,
+        "height": 0.088096,
+        "formula": "=HLOOKUP(K31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012721
+      },
+      {
+        "cell": "O30",
+        "x": 0.229914,
+        "y": 0.102411,
+        "width": 0.164029,
+        "height": 0.046901,
+        "formula": "=\"φ\"&O28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.015902
+      },
+      {
+        "cell": "O32",
+        "x": 0.382996,
+        "y": 0.081814,
+        "width": 0.054157,
+        "height": 0.088007,
+        "formula": "=HLOOKUP(O31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012721
+      },
+      {
+        "cell": "J30",
+        "x": 0.23371,
+        "y": 0.027066,
+        "width": 0.160234,
+        "height": 0.046901,
+        "formula": "=\"φ\"&J28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.015902
+      },
+      {
+        "cell": "J32",
+        "x": 0.382996,
+        "y": 0.006112,
+        "width": 0.054157,
+        "height": 0.08872,
+        "formula": "=HLOOKUP(J31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012721
+      },
+      {
+        "cell": "H30",
+        "x": 0.511455,
+        "y": 0.576061,
+        "width": 0.152011,
+        "height": 0.059474,
+        "formula": "=IF(AND(OR(A28=\"GB9124.1-19\",A28=\"HG20592-09\"),C28=\"DN125\"),H28,H28-IF(LEFT(B28,5)=\"Class\",0,X28))",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.015902
+      },
+      {
+        "cell": "H32",
+        "x": 0.56571,
+        "y": 0.342624,
+        "width": 0.045837,
+        "height": 0.117432,
+        "formula": "=HLOOKUP(H31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.012721
+      },
+      {
+        "cell": "N30",
+        "x": 0.586633,
+        "y": 0.444719,
+        "width": 0.118582,
+        "height": 0.052965,
+        "formula": "=IF(AND(OR(A28=\"GB9124.1-19\",A28=\"HG20592-09\"),C28=\"DN125\"),N28,N28-IF(LEFT(B28,5)=\"Class\",0,S28))",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.015902
+      },
+      {
+        "cell": "N32",
+        "x": 0.587947,
+        "y": 0.173833,
+        "width": 0.115906,
+        "height": 0.078288,
+        "formula": "=HLOOKUP(N31,公差,2,0)",
+        "align": "left",
+        "rotation": 270.0,
+        "fontScale": 0.012721
+      },
+      {
+        "cell": "X32",
+        "x": 0.114349,
+        "y": 0.522026,
+        "width": 0.145636,
+        "height": 0.053054,
+        "formula": "=IF(输入界面!$A$9=\"GOST33259-15\",X28,S28)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.015902
+      },
+      {
+        "cell": "U32",
+        "x": 0.162424,
+        "y": 0.285023,
+        "width": 0.045058,
+        "height": 0.117699,
+        "formula": "=IF(输入界面!$A$9=\"GOST33259-15\",X30,S32)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.012721
+      },
+      {
+        "cell": "F28",
+        "x": 0.161062,
+        "y": 0.226709,
+        "width": 0.143252,
+        "height": 0.046723,
+        "formula": "=HLOOKUP(F27,环连接面法兰数据源!$A$2:$AA$3,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.015902
+      },
+      {
+        "cell": "L30",
+        "x": 0.241447,
+        "y": 0.198443,
+        "width": 0.112013,
+        "height": 0.049844,
+        "formula": "=\"R\"&L28",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012721
+      },
+      {
+        "cell": "M30",
+        "x": 0.237067,
+        "y": 0.11641,
+        "width": 0.117171,
+        "height": 0.05136,
+        "formula": "=\"R\"&M28",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012721
+      },
+      {
+        "cell": "P28",
+        "x": 0.444063,
+        "y": 0.047574,
+        "width": 0.058537,
+        "height": 0.052965,
+        "formula": "=HLOOKUP(P27,环连接面法兰数据源!$A$2:$AA$3,2,0)",
+        "align": "left",
+        "rotation": 270.0,
+        "fontScale": 0.015902
+      },
+      {
+        "cell": "Q28",
+        "x": 0.655291,
+        "y": 0.032862,
+        "width": 0.059705,
+        "height": 0.046723,
+        "formula": "=HLOOKUP(Q27,环连接面法兰数据源!$A$2:$AA$3,2,0)",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.015902
+      },
+      {
+        "cell": "Q32",
+        "x": 0.694754,
+        "y": 0.012175,
+        "width": 0.054206,
+        "height": 0.088096,
+        "formula": "=HLOOKUP(Q31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.012721
+      },
+      {
+        "cell": "T28",
+        "x": 0.678307,
+        "y": 0.392468,
+        "width": 0.091382,
+        "height": 0.046901,
+        "formula": "=HLOOKUP(T27,环连接面法兰数据源!$A$2:$AA$3,2,0)",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.015902
+      },
+      {
+        "cell": "V28",
+        "x": 0.693391,
+        "y": 0.576559,
+        "width": 0.063889,
+        "height": 0.030203,
+        "formula": "=公差统计!T4",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.015902
+      }
+    ],
+    "details": [
+      {
+        "image": "image39.png",
+        "x": 0.683161,
+        "y": 0.076276,
+        "width": 0.19082,
+        "height": 0.420908,
+        "crop": {
+          "left": 0.18719,
+          "top": 0.05966,
+          "right": 0.38721,
+          "bottom": 0.02983
+        }
+      },
+      {
+        "image": "image26.png",
+        "x": 0.699063,
+        "y": 0.558105,
+        "width": 0.160607,
+        "height": 0.174759,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
+      }
+    ]
+  },
+  "RJ|承插焊法兰": {
+    "sheet": "环连接面法兰SW",
+    "image": "image40.png",
+    "annotations": [
+      {
+        "cell": "Q30",
+        "x": 0.256751,
+        "y": 0.60079,
+        "width": 0.19059,
+        "height": 0.054385,
+        "formula": "=\"φ\"&Q28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.018409
+      },
+      {
+        "cell": "I30",
+        "x": 0.251101,
+        "y": 0.683271,
+        "width": 0.19624,
+        "height": 0.054476,
+        "formula": "=\"φ\"&I28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.018409
+      },
+      {
+        "cell": "E30",
+        "x": 0.281393,
+        "y": 0.769999,
+        "width": 0.165947,
+        "height": 0.054476,
+        "formula": "=\"φ\"&E28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.018409
+      },
+      {
+        "cell": "Q32",
+        "x": 0.438926,
+        "y": 0.576759,
+        "width": 0.062688,
+        "height": 0.102447,
+        "formula": "=HLOOKUP(Q31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.014727
+      },
+      {
+        "cell": "D30",
+        "x": 0.283377,
+        "y": 0.85772,
+        "width": 0.163964,
+        "height": 0.054476,
+        "formula": "=\"φ\"&D28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.018409
+      },
+      {
+        "cell": "I32",
+        "x": 0.438926,
+        "y": 0.659421,
+        "width": 0.062688,
+        "height": 0.102447,
+        "formula": "=HLOOKUP(I31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.014727
+      },
+      {
+        "cell": "E32",
+        "x": 0.438926,
+        "y": 0.741812,
+        "width": 0.062688,
+        "height": 0.110758,
+        "formula": "=HLOOKUP(E31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.014727
+      },
+      {
+        "cell": "D32",
+        "x": 0.438926,
+        "y": 0.83378,
+        "width": 0.062688,
+        "height": 0.102266,
+        "formula": "=HLOOKUP(D31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.014727
+      },
+      {
+        "cell": "K30",
+        "x": 0.356283,
+        "y": 0.522826,
+        "width": 0.091058,
+        "height": 0.054476,
+        "formula": "B",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.018409
+      },
+      {
+        "cell": "K32",
+        "x": 0.437063,
+        "y": 0.493465,
+        "width": 0.052952,
+        "height": 0.102266,
+        "formula": "=HLOOKUP(K31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.014727
+      },
+      {
+        "cell": "O32",
+        "x": 0.4352,
+        "y": 0.086479,
+        "width": 0.062688,
+        "height": 0.102447,
+        "formula": "=HLOOKUP(O31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.014727
+      },
+      {
+        "cell": "J30",
+        "x": 0.29083,
+        "y": 0.01267,
+        "width": 0.166007,
+        "height": 0.054476,
+        "formula": "=\"φ\"&J28",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.018409
+      },
+      {
+        "cell": "J32",
+        "x": 0.437003,
+        "y": -0.01127,
+        "width": 0.062688,
+        "height": 0.102266,
+        "formula": "=HLOOKUP(J31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.014727
+      },
+      {
+        "cell": "O30",
+        "x": 0.362474,
+        "y": 0.110509,
+        "width": 0.094003,
+        "height": 0.054385,
+        "formula": "B1",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.018409
+      },
+      {
+        "cell": "P28",
+        "x": 0.749003,
+        "y": 0.136799,
+        "width": 0.06912,
+        "height": 0.054476,
+        "formula": "=HLOOKUP(P27,环连接面法兰数据源!$A$2:$AA$3,2,0)",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.018409
+      },
+      {
+        "cell": "P32",
+        "x": 0.794561,
+        "y": 0.112949,
+        "width": 0.062688,
+        "height": 0.102266,
+        "formula": "=HLOOKUP(P31,公差,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.014727
+      },
+      {
+        "cell": "S28",
+        "x": 0.721295,
+        "y": 0.551374,
+        "width": 0.164925,
+        "height": 0.054385,
+        "formula": "=HLOOKUP(S27,环连接面法兰数据源!$A$2:$AA$3,2,0)",
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.018409
+      },
+      {
+        "cell": "F28",
+        "x": 0.188292,
+        "y": 0.116111,
+        "width": 0.1273,
+        "height": 0.054476,
+        "formula": "=HLOOKUP(F27,环连接面法兰数据源!$A$2:$AA$3,2,0)",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.018409
+      },
+      {
+        "cell": "M30",
+        "x": 0.489113,
+        "y": 0.083046,
+        "width": 0.156751,
+        "height": 0.054476,
+        "formula": "=\"R\"&M28",
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.014727
+      },
+      {
+        "cell": "N30",
+        "x": 0.647367,
+        "y": 0.502589,
+        "width": 0.20213,
+        "height": 0.06098,
+        "formula": "=N28-IF(LEFT(B28,5)=\"Class\",0,R28)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.018409
+      },
+      {
+        "cell": "N32",
+        "x": 0.715945,
+        "y": 0.184318,
+        "width": 0.055476,
+        "height": 0.147617,
+        "formula": "=HLOOKUP(N31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.014727
+      },
+      {
+        "cell": "H30",
+        "x": 0.57434,
+        "y": 0.574862,
+        "width": 0.210665,
+        "height": 0.061522,
+        "formula": "=H28-IF(LEFT(B28,5)=\"Class\",0,U28)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.018409
+      },
+      {
+        "cell": "H32",
+        "x": 0.64953,
+        "y": 0.242949,
+        "width": 0.052711,
+        "height": 0.147617,
+        "formula": "=HLOOKUP(H31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.014727
+      },
+      {
+        "cell": "U32",
+        "x": 0.110578,
+        "y": 0.474584,
+        "width": 0.182295,
+        "height": 0.061703,
+        "formula": "=IF(输入界面!$A$9=\"GOST33259-15\",U28,R28)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.018409
+      },
+      {
+        "cell": "T32",
+        "x": 0.176272,
+        "y": 0.201664,
+        "width": 0.046641,
+        "height": 0.14834,
+        "formula": "=IF(输入界面!$A$9=\"GOST33259-15\",U30,R32)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.014727
+      },
+      {
+        "cell": "L28",
+        "x": 0.3082,
+        "y": 0.161281,
+        "width": 0.081201,
+        "height": 0.061703,
+        "formula": "=HLOOKUP(L27,环连接面法兰数据源!$A$2:$AA$3,2,0)",
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.018409
+      },
+      {
+        "cell": "L32",
+        "x": 0.318117,
+        "y": -0.010367,
+        "width": 0.058782,
+        "height": 0.147617,
+        "formula": "=HLOOKUP(L31,公差,2,0)",
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.014727
+      }
+    ],
+    "details": [
+      {
+        "image": "image39.png",
+        "x": 0.784941,
+        "y": 0.1849,
+        "width": 0.220903,
+        "height": 0.489258,
+        "crop": {
+          "left": 0.18719,
+          "top": 0.05966,
+          "right": 0.38721,
+          "bottom": 0.02983
+        }
+      }
+    ]
+  },
+  "RF|整体法兰|夹套": {
+    "sheet": "突面法兰IF",
+    "image": "image24.png",
+    "annotations": [
+      {
+        "cell": "C33",
+        "x": 0.688485,
+        "y": 0.421632,
+        "width": 0.151056,
+        "height": 0.038548,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "I31",
+        "x": 0.23663,
+        "y": 0.596404,
+        "width": 0.15927,
+        "height": 0.035648,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "I33",
+        "x": 0.391223,
+        "y": 0.577505,
+        "width": 0.053908,
+        "height": 0.072325,
+        "align": "left",
+        "rotation": 0.0,
+        "fontScale": 0.023055
+      },
+      {
+        "cell": "E31",
+        "x": 0.230698,
+        "y": 0.660496,
+        "width": 0.167085,
+        "height": 0.035554,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "E33",
+        "x": 0.383921,
+        "y": 0.637853,
+        "width": 0.053851,
+        "height": 0.077845,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.023055
+      },
+      {
+        "cell": "D31",
+        "x": 0.208336,
+        "y": 0.709991,
+        "width": 0.186024,
+        "height": 0.050618,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "D33",
+        "x": 0.38472,
+        "y": 0.700448,
+        "width": 0.053908,
+        "height": 0.071202,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.023055
+      },
+      {
+        "cell": "J29",
+        "x": 0.104742,
+        "y": 0.63776,
+        "width": 0.068397,
+        "height": 0.03518,
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "J33",
+        "x": 0.112614,
+        "y": 0.542325,
+        "width": 0.049344,
+        "height": 0.076255,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.023055
+      },
+      {
+        "cell": "N29",
+        "x": 0.147697,
+        "y": 0.554301,
+        "width": 0.108215,
+        "height": 0.035648,
+        "align": "left",
+        "rotation": 0.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "F33",
+        "x": 0.317691,
+        "y": 0.125685,
+        "width": 0.215745,
+        "height": 0.035648,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "M31",
+        "x": 0.05517,
+        "y": 0.397768,
+        "width": 0.103993,
+        "height": 0.035648,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "K29",
+        "x": 0.502404,
+        "y": 0.419382,
+        "width": 0.208044,
+        "height": 0.035648,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "L29",
+        "x": 0.486716,
+        "y": 0.406938,
+        "width": 0.311352,
+        "height": 0.035648,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "C29",
+        "x": 0.304172,
+        "y": 0.5325,
+        "width": 0.160867,
+        "height": 0.035648,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.028818
+      }
+    ],
+    "details": [
+      {
+        "image": "image25.png",
+        "x": 0.672969,
+        "y": 0.240998,
+        "width": 0.190816,
+        "height": 0.248046,
+        "crop": {
+          "left": 0.06763,
+          "top": 0.0,
+          "right": 0.03488,
+          "bottom": 0.0
+        }
+      }
+    ]
+  },
+  "F|整体法兰|夹套": {
+    "sheet": "凹面法兰IF",
+    "image": "image31.png",
+    "annotations": [
+      {
+        "cell": "C33",
+        "x": 0.725474,
+        "y": 0.445544,
+        "width": 0.221264,
+        "height": 0.04092,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "L31",
+        "x": 0.293947,
+        "y": 0.609395,
+        "width": 0.125549,
+        "height": 0.03957,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "L33",
+        "x": 0.400229,
+        "y": 0.590805,
+        "width": 0.06352,
+        "height": 0.074259,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.022923
+      },
+      {
+        "cell": "I31",
+        "x": 0.295688,
+        "y": 0.669321,
+        "width": 0.121198,
+        "height": 0.03957,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "I33",
+        "x": 0.40085,
+        "y": 0.653119,
+        "width": 0.06352,
+        "height": 0.074259,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.022923
+      },
+      {
+        "cell": "E31",
+        "x": 0.301157,
+        "y": 0.729248,
+        "width": 0.119023,
+        "height": 0.03957,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "E33",
+        "x": 0.401658,
+        "y": 0.712942,
+        "width": 0.06352,
+        "height": 0.074362,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.022923
+      },
+      {
+        "cell": "D31",
+        "x": 0.295377,
+        "y": 0.793743,
+        "width": 0.123249,
+        "height": 0.03957,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "D33",
+        "x": 0.400788,
+        "y": 0.777438,
+        "width": 0.06352,
+        "height": 0.074362,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.022923
+      },
+      {
+        "cell": "C29",
+        "x": 0.317628,
+        "y": 0.549469,
+        "width": 0.184159,
+        "height": 0.03957,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "F33",
+        "x": 0.308243,
+        "y": 0.143176,
+        "width": 0.318222,
+        "height": 0.039466,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "O31",
+        "x": 0.044404,
+        "y": 0.388489,
+        "width": 0.096834,
+        "height": 0.03957,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "J29",
+        "x": 0.062677,
+        "y": 0.683654,
+        "width": 0.127662,
+        "height": 0.03957,
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "J33",
+        "x": 0.097358,
+        "y": 0.52984,
+        "width": 0.054073,
+        "height": 0.102612,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.022923
+      },
+      {
+        "cell": "P29",
+        "x": 0.140616,
+        "y": 0.583846,
+        "width": 0.119955,
+        "height": 0.039466,
+        "align": "left",
+        "rotation": 0.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "N29",
+        "x": 0.612294,
+        "y": 0.417465,
+        "width": 0.192922,
+        "height": 0.039466,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "M29",
+        "x": 0.585631,
+        "y": 0.430344,
+        "width": 0.162032,
+        "height": 0.03957,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "K29",
+        "x": 0.427638,
+        "y": 0.424112,
+        "width": 0.031947,
+        "height": 0.03957,
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "K33",
+        "x": 0.416948,
+        "y": 0.36294,
+        "width": 0.049784,
+        "height": 0.074259,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.022923
+      }
+    ],
+    "details": [
+      {
+        "image": "image25.png",
+        "x": 0.739272,
+        "y": 0.252327,
+        "width": 0.207901,
+        "height": 0.270246,
+        "crop": {
+          "left": 0.06761,
+          "top": 0.0,
+          "right": 0.03487,
+          "bottom": 0.0
+        }
+      }
+    ]
+  },
+  "M|整体法兰|夹套": {
+    "sheet": "凸面法兰IF",
+    "image": "image24.png",
+    "annotations": [
+      {
+        "cell": "C29",
+        "x": 0.321106,
+        "y": 0.534694,
+        "width": 0.127869,
+        "height": 0.036877,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "J31",
+        "x": 0.267467,
+        "y": 0.596737,
+        "width": 0.118142,
+        "height": 0.036877,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "J33",
+        "x": 0.374859,
+        "y": 0.573991,
+        "width": 0.058189,
+        "height": 0.075787,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.022989
+      },
+      {
+        "cell": "E31",
+        "x": 0.246876,
+        "y": 0.660231,
+        "width": 0.138733,
+        "height": 0.036877,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "E33",
+        "x": 0.375428,
+        "y": 0.639905,
+        "width": 0.058133,
+        "height": 0.076658,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.022989
+      },
+      {
+        "cell": "D31",
+        "x": 0.235216,
+        "y": 0.719564,
+        "width": 0.150394,
+        "height": 0.036877,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "D33",
+        "x": 0.375428,
+        "y": 0.701754,
+        "width": 0.058133,
+        "height": 0.075496,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.022989
+      },
+      {
+        "cell": "N29",
+        "x": 0.147619,
+        "y": 0.5526,
+        "width": 0.195842,
+        "height": 0.03678,
+        "align": "left",
+        "rotation": 0.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "M31",
+        "x": 0.028054,
+        "y": 0.399382,
+        "width": 0.155172,
+        "height": 0.036877,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "K29",
+        "x": 0.544877,
+        "y": 0.416901,
+        "width": 0.132533,
+        "height": 0.036877,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "L29",
+        "x": 0.57474,
+        "y": 0.410319,
+        "width": 0.139188,
+        "height": 0.036877,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "F33",
+        "x": 0.29659,
+        "y": 0.126627,
+        "width": 0.26865,
+        "height": 0.036877,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "C33",
+        "x": 0.704656,
+        "y": 0.456071,
+        "width": 0.120873,
+        "height": 0.041329,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "I29",
+        "x": 0.083115,
+        "y": 0.667974,
+        "width": 0.106425,
+        "height": 0.036393,
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "I33",
+        "x": 0.108143,
+        "y": 0.53121,
+        "width": 0.055914,
+        "height": 0.079755,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.022989
+      }
+    ],
+    "details": [
+      {
+        "image": "image25.png",
+        "x": 0.67212,
+        "y": 0.27706,
+        "width": 0.1988,
+        "height": 0.250257,
+        "crop": {
+          "left": 0.037,
+          "top": 0.0,
+          "right": 0.03622,
+          "bottom": 0.0
+        }
+      }
+    ]
+  },
+  "RJ|整体法兰|夹套": {
+    "sheet": "环连接面法兰IF",
+    "image": "image37.png",
+    "annotations": [
+      {
+        "cell": "J29",
+        "x": 0.636234,
+        "y": 0.235782,
+        "width": 0.064865,
+        "height": 0.038037,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "J33",
+        "x": 0.68602,
+        "y": 0.220507,
+        "width": 0.063772,
+        "height": 0.071481,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017335
+      },
+      {
+        "cell": "M29",
+        "x": 0.597384,
+        "y": 0.54926,
+        "width": 0.168408,
+        "height": 0.038037,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "M33",
+        "x": 0.746971,
+        "y": 0.532488,
+        "width": 0.058822,
+        "height": 0.071381,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017335
+      },
+      {
+        "cell": "N29",
+        "x": 0.799059,
+        "y": 0.615549,
+        "width": 0.081902,
+        "height": 0.038037,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "C29",
+        "x": 0.315821,
+        "y": 0.505632,
+        "width": 0.12363,
+        "height": 0.037937,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "K31",
+        "x": 0.264251,
+        "y": 0.564634,
+        "width": 0.126853,
+        "height": 0.038037,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "K33",
+        "x": 0.376082,
+        "y": 0.547962,
+        "width": 0.058822,
+        "height": 0.071481,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017335
+      },
+      {
+        "cell": "I31",
+        "x": 0.254984,
+        "y": 0.617945,
+        "width": 0.136925,
+        "height": 0.038037,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "I33",
+        "x": 0.374067,
+        "y": 0.601173,
+        "width": 0.058822,
+        "height": 0.071481,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017335
+      },
+      {
+        "cell": "E31",
+        "x": 0.229084,
+        "y": 0.672055,
+        "width": 0.163631,
+        "height": 0.038037,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "E33",
+        "x": 0.375506,
+        "y": 0.654185,
+        "width": 0.05888,
+        "height": 0.071381,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017335
+      },
+      {
+        "cell": "D31",
+        "x": 0.206753,
+        "y": 0.724568,
+        "width": 0.186481,
+        "height": 0.037937,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "D33",
+        "x": 0.378039,
+        "y": 0.707696,
+        "width": 0.05888,
+        "height": 0.071381,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017335
+      },
+      {
+        "cell": "R31",
+        "x": 0.033452,
+        "y": 0.354684,
+        "width": 0.137501,
+        "height": 0.038037,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "F33",
+        "x": 0.300511,
+        "y": 0.104001,
+        "width": 0.221417,
+        "height": 0.038037,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "O33",
+        "x": 0.073799,
+        "y": 0.612754,
+        "width": 0.127371,
+        "height": 0.038436,
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "N33",
+        "x": 0.111728,
+        "y": 0.470291,
+        "width": 0.044548,
+        "height": 0.077072,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.017335
+      },
+      {
+        "cell": "S29",
+        "x": 0.148334,
+        "y": 0.502338,
+        "width": 0.142451,
+        "height": 0.038037,
+        "align": "left",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "P29",
+        "x": 0.569124,
+        "y": 0.396315,
+        "width": 0.051282,
+        "height": 0.037937,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "Q29",
+        "x": 0.609413,
+        "y": 0.391722,
+        "width": 0.051225,
+        "height": 0.037537,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "L29",
+        "x": 0.80988,
+        "y": 0.415083,
+        "width": 0.080175,
+        "height": 0.038037,
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "L33",
+        "x": 0.825995,
+        "y": 0.319243,
+        "width": 0.044606,
+        "height": 0.071481,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.017335
+      }
+    ]
+  }
+}

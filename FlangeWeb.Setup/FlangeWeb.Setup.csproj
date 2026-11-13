@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlangeWeb\FlangeWeb.csproj" ReferenceOutputAssembly="false" />
+    <None Include="Launcher.cs" />
+    <None Include="Setup.cs" />
+    <None Remove="Output\**\*" />
+  </ItemGroup>
+  <Target Name="BuildInstaller" AfterTargets="Build" Condition="'$(OS)' == 'Windows_NT' and '$(DesignTimeBuild)' != 'true' and '$(SkipInstaller)' != 'true'">
+    <Message Importance="high" Text="Building the Windows installer from the current application..." />
+    <Exec WorkingDirectory="$(TEMP)" EnvironmentVariables="FLANGE_SETUP_ROOT=$(MSBuildProjectDirectory)" Command="powershell.exe -NoProfile -NonInteractive -Command &quot;$ErrorActionPreference='Stop'; $build=[scriptblock]::Create([IO.File]::ReadAllText([IO.Path]::Combine($env:FLANGE_SETUP_ROOT,'build.ps1'))); &amp; $build -BuildRoot $env:FLANGE_SETUP_ROOT&quot;" />
+  </Target>
+  <Target Name="UnsupportedPlatform" AfterTargets="Build" Condition="'$(OS)' != 'Windows_NT' and '$(DesignTimeBuild)' != 'true' and '$(SkipInstaller)' != 'true'">
+    <Warning Text="The Windows installer can only be built on Windows." />
+  </Target>
+</Project>
