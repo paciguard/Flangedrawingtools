@@ -12,8 +12,7 @@ app.MapGet("/api/drawing-metadata", async () => Results.Text(await File.ReadAllT
 app.MapGet("/api/options", async () => Results.Text(await File.ReadAllTextAsync(FileInData("options.json")), "application/json; charset=utf-8"));
 app.MapGet("/api/lookup", async (string standard, string pressure, string dn, string face, string type, string? insulation) => {
     var kind = face.EndsWith("/RF") || face.EndsWith("/B") ? "RF" : face.EndsWith("/F") ? "F" : face.EndsWith("/M") || face.EndsWith("/E") ? "M" : face.EndsWith("/RJ") || face.EndsWith("/J") ? "RJ" : "";
-    if (kind == "" || !new[]{"整体法兰","对焊法兰","承插焊法兰"}.Contains(type)) return Results.BadRequest(new { error = "不支持的密封面或连接型式" });
-    if (standard.Contains("夹套") && type != "整体法兰") return Results.BadRequest(new { error = "夹套配对仅支持整体法兰" });
+    if (kind == "" || type != "整体法兰") return Results.BadRequest(new { error = "此工具只支持整体法兰（IF）及其密封面" });
     string sheet = kind == "RF" ? "突面法兰数据源" : kind == "RJ" ? "环连接面法兰数据源" : "凹凸面法兰数据源";
     var root = JsonNode.Parse(await File.ReadAllTextAsync(FileInData("flanges.json")))!;
     var table = root[sheet]!; var rows = table["rows"]!.AsArray();
