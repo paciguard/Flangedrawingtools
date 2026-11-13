@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 app.UseDefaultFiles(); app.UseStaticFiles();
 string FileInData(string name) => Path.Combine(app.Environment.ContentRootPath, "Data", name);
+app.MapGet("/api/health", () => Results.Text("FlangeWeb", "text/plain"));
 app.MapGet("/api/data", async () => Results.Text(await File.ReadAllTextAsync(FileInData("flanges.json")), "application/json; charset=utf-8"));
 app.MapGet("/api/counterbores", async () => Results.Text(await File.ReadAllTextAsync(FileInData("counterbores.json")), "application/json; charset=utf-8"));
 app.MapGet("/api/annotation-bindings", async () => Results.Text(await File.ReadAllTextAsync(FileInData("annotation-bindings.json")), "application/json; charset=utf-8"));
