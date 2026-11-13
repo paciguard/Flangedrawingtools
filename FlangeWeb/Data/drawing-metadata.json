@@ -168,6 +168,21 @@
         "rotation": 0.0,
         "fontScale": 0.019135
       }
+    ],
+    "details": [
+      {
+        "image": "image25.png",
+        "x": 0.685935,
+        "y": 0.12457,
+        "width": 0.238225,
+        "height": 0.375015,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
+      }
     ]
   },
   "RF|对焊法兰": {
@@ -427,6 +442,34 @@
         "rotation": 0.0,
         "fontScale": 0.019227
       }
+    ],
+    "details": [
+      {
+        "image": "image26.png",
+        "x": 0.728622,
+        "y": 0.398235,
+        "width": 0.233608,
+        "height": 0.325367,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
+      },
+      {
+        "image": "image25.png",
+        "x": 0.717086,
+        "y": 0.010368,
+        "width": 0.239376,
+        "height": 0.360293,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
+      }
     ]
   },
   "RF|承插焊法兰": {
@@ -675,6 +718,21 @@
         "rotation": 270.0,
         "fontScale": 0.017823
       }
+    ],
+    "details": [
+      {
+        "image": "image25.png",
+        "x": 0.733229,
+        "y": 0.145213,
+        "width": 0.257056,
+        "height": 0.379937,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
+      }
     ]
   },
   "F|整体法兰": {
@@ -867,6 +925,21 @@
         "align": "center",
         "rotation": 270.0,
         "fontScale": 0.016883
+      }
+    ],
+    "details": [
+      {
+        "image": "image25.png",
+        "x": 0.754051,
+        "y": 0.115296,
+        "width": 0.235302,
+        "height": 0.410874,
+        "crop": {
+          "left": 0.06761,
+          "top": 0.0,
+          "right": 0.03487,
+          "bottom": 0.0
+        }
       }
     ]
   },
@@ -1193,6 +1266,34 @@
         "rotation": 0.0,
         "fontScale": 0.015844
       }
+    ],
+    "details": [
+      {
+        "image": "image26.png",
+        "x": 0.651426,
+        "y": 0.451872,
+        "width": 0.193305,
+        "height": 0.349772,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
+      },
+      {
+        "image": "image25.png",
+        "x": 0.665686,
+        "y": 0.034911,
+        "width": 0.175876,
+        "height": 0.343844,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
+      }
     ]
   },
   "F|承插焊法兰": {
@@ -1496,6 +1597,21 @@
         "rotation": 0.0,
         "fontScale": 0.017722
       }
+    ],
+    "details": [
+      {
+        "image": "image25.png",
+        "x": 0.768808,
+        "y": 0.086472,
+        "width": 0.197601,
+        "height": 0.41685,
+        "crop": {
+          "left": 0.037,
+          "top": 0.0,
+          "right": 0.03622,
+          "bottom": 0.0
+        }
+      }
     ]
   },
   "M|整体法兰": {
@@ -1666,6 +1782,21 @@
         "align": "center",
         "rotation": 0.0,
         "fontScale": 0.021196
+      }
+    ],
+    "details": [
+      {
+        "image": "image25.png",
+        "x": 0.721818,
+        "y": 0.180203,
+        "width": 0.246934,
+        "height": 0.418866,
+        "crop": {
+          "left": 0.037,
+          "top": 0.0,
+          "right": 0.03622,
+          "bottom": 0.0
+        }
       }
     ]
   },
@@ -1926,6 +2057,34 @@
         "rotation": 270.0,
         "fontScale": 0.015382
       }
+    ],
+    "details": [
+      {
+        "image": "image26.png",
+        "x": 0.735352,
+        "y": 0.409264,
+        "width": 0.234569,
+        "height": 0.327205,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
+      },
+      {
+        "image": "image25.png",
+        "x": 0.736313,
+        "y": 0.028751,
+        "width": 0.22111,
+        "height": 0.330881,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
+      }
     ]
   },
   "M|承插焊法兰": {
@@ -2173,6 +2332,21 @@
         "align": "center",
         "rotation": 270.0,
         "fontScale": 0.017239
+      }
+    ],
+    "details": [
+      {
+        "image": "image25.png",
+        "x": 0.763908,
+        "y": 0.180726,
+        "width": 0.30707,
+        "height": 0.45232,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
       }
     ]
   },
@@ -2781,19 +2955,34 @@
         "fontScale": 0.015902
       }
     ],
-    "detail": {
-      "image": "image39.png",
-      "x": 0.683161,
-      "y": 0.076276,
-      "width": 0.19082,
-      "height": 0.420908,
-      "crop": {
-        "left": 0.18719,
-        "top": 0.05966,
-        "right": 0.38721,
-        "bottom": 0.02983
+    "details": [
+      {
+        "image": "image39.png",
+        "x": 0.683161,
+        "y": 0.076276,
+        "width": 0.19082,
+        "height": 0.420908,
+        "crop": {
+          "left": 0.18719,
+          "top": 0.05966,
+          "right": 0.38721,
+          "bottom": 0.02983
+        }
+      },
+      {
+        "image": "image26.png",
+        "x": 0.699063,
+        "y": 0.558105,
+        "width": 0.160607,
+        "height": 0.271375,
+        "crop": {
+          "left": 0.0,
+          "top": 0.0,
+          "right": 0.0,
+          "bottom": 0.0
+        }
       }
-    }
+    ]
   },
   "RJ|承插焊法兰": {
     "sheet": "环连接面法兰SW",
@@ -3097,18 +3286,20 @@
         "fontScale": 0.014727
       }
     ],
-    "detail": {
-      "image": "image39.png",
-      "x": 0.784941,
-      "y": 0.1849,
-      "width": 0.220903,
-      "height": 0.489258,
-      "crop": {
-        "left": 0.18719,
-        "top": 0.05966,
-        "right": 0.38721,
-        "bottom": 0.02983
+    "details": [
+      {
+        "image": "image39.png",
+        "x": 0.784941,
+        "y": 0.1849,
+        "width": 0.220903,
+        "height": 0.489258,
+        "crop": {
+          "left": 0.18719,
+          "top": 0.05966,
+          "right": 0.38721,
+          "bottom": 0.02983
+        }
       }
-    }
+    ]
   }
 }
