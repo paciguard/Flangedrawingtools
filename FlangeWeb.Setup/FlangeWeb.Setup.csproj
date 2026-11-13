@@ -6,6 +6,9 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\FlangeWeb\FlangeWeb.csproj" ReferenceOutputAssembly="false" />
+    <None Include="Launcher.cs" />
+    <None Include="Setup.cs" />
+    <None Remove="Output\**\*" />
   </ItemGroup>
   <Target Name="BuildInstaller" AfterTargets="Build" Condition="'$(OS)' == 'Windows_NT' and '$(DesignTimeBuild)' != 'true' and '$(SkipInstaller)' != 'true'">
     <Message Importance="high" Text="Building the Windows installer from the current application..." />
