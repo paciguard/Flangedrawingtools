@@ -34,6 +34,7 @@ app.MapGet("/api/lookup", async (string standard, string pressure, string dn, st
     var row = hits[0]!;
     decimal? Number(int index) => decimal.TryParse(row[index]?.ToString(), NumberStyles.Float, CultureInfo.InvariantCulture, out var value) ? value : null;
     var displayedThickness = ThicknessRules.Calculate(standard, pressure, dn, kind, type, Number(8), Number(9), kind == "RF" ? Number(11) : null, kind is "F" or "M" ? Number(23) : null, kind is "F" or "M" ? Number(24) : null, kind == "RJ" ? Number(27) : null);
+    displayedThickness = JacketRules.DisplayedThickness(standard, type, displayedThickness, row[7]?.ToString());
     var heightIndex = kind == "RF" ? (type == "对焊法兰" ? 19 : 20) : (type == "对焊法兰" ? 18 : 19);
     var displayedHeight = ThicknessRules.Height(standard, pressure, dn, kind, type, Number(heightIndex), kind == "RF" ? Number(11) : null, kind is "F" or "M" ? Number(23) : null, kind is "F" or "M" ? Number(24) : null, kind == "RJ" ? Number(25) : null);
     return Results.Ok(new { sheet, headers = table["headers"], row, displayedThickness, displayedHeight, note = "尺寸试算待核对，不可用于制造" });

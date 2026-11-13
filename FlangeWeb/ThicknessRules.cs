@@ -1,2 +1,58 @@
-1ëa¡Ò'¾‡¶*'¦Ø¨œ¸§{`¨ž÷«µ:jÇºá+kŠx8X¥yšt	e+^±¬¢[Þ=«a.+^¦Ø¨Æ¥–)àEæYAÊ×¬Â+aÕªàºg§¶Ã^·
-+‘§zË"±×§‰çu÷mzóMt2'+¢Ê´ú0z´¡zYB¢·…ŠW’ÊË^›_v×¯4×AejxYæÓ†'$ë,Fé^±Ë
+namespace FlangeWeb;
+
+public static class ThicknessRules
+{
+    // Formulas transcribed from the workbook's twelve drawing templates.
+    public static decimal? Calculate(string standard, string pressure, string dn, string face, string type,
+        decimal? otherThickness, decimal? integralThickness, decimal? rfHeight,
+        decimal? f1, decimal? f2, decimal? ringFaceHeight)
+    {
+        // Jacket rows use the same integral-flange thickness conventions as their base standard.
+        var jacket = standard.EndsWith("-å¤¹å¥—", StringComparison.Ordinal);
+        if (jacket) standard = standard[..^3];
+        var isClass = pressure.StartsWith("Class", StringComparison.OrdinalIgnoreCase);
+        if (face == "RF")
+        {
+            var c = type == "æ•´ä½“æ³•å…°" ? integralThickness : otherThickness;
+            return isClass ? Add(c, rfHeight) : c;
+        }
+        var integral = type == "æ•´ä½“æ³•å…°";
+        var baseThickness = integral ? integralThickness : otherThickness;
+        if (face == "F") return isClass ? baseThickness : Subtract(baseThickness, f1);
+        if (face == "M")
+        {
+            if (integral)
+            {
+                var c = jacket || standard is "GB9124.1-19" or "HG20592-09" ? integralThickness : otherThickness;
+                return isClass ? c : Subtract(c, f2);
+            }
+            if (type == "å¯¹ç„Šæ³•å…°") return isClass ? Add(otherThickness, f2) : otherThickness;
+            return isClass ? otherThickness : Subtract(otherThickness, f2);
+        }
+        if (face == "RJ")
+        {
+            var exception = type != "æ‰¿æ’ç„Šæ³•å…°" && (standard == "GB9124.1-19" || standard == "HG20592-09") && dn == "DN125";
+            if (isClass || exception) return baseThickness;
+            return Subtract(baseThickness, ringFaceHeight);
+        }
+        return null;
+    }
+    public static decimal? Height(string standard, string pressure, string dn, string face, string type,
+        decimal? height, decimal? rfHeight, decimal? f1, decimal? f2, decimal? ringGrooveDepth)
+    {
+        if (type == "æ•´ä½“æ³•å…°") return null;
+        var isClass = pressure.StartsWith("Class", StringComparison.OrdinalIgnoreCase);
+        if (face == "RF") return isClass ? Add(height, rfHeight) : height;
+        if (face == "F") return isClass ? height : Subtract(height, f1);
+        if (face == "M")
+            return type == "å¯¹ç„Šæ³•å…°" ? (isClass ? Add(height, f2) : height) : (isClass ? height : Subtract(height, f2));
+        if (face == "RJ")
+        {
+            var exception = type == "å¯¹ç„Šæ³•å…°" && (standard == "GB9124.1-19" || standard == "HG20592-09") && dn == "DN125";
+            return isClass || exception ? height : Subtract(height, ringGrooveDepth);
+        }
+        return null;
+    }
+    private static decimal? Add(decimal? a, decimal? b) => a.HasValue && b.HasValue ? a + b : null;
+    private static decimal? Subtract(decimal? a, decimal? b) => a.HasValue && b.HasValue ? a - b : null;
+}

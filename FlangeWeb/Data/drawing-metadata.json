@@ -3301,5 +3301,794 @@
         }
       }
     ]
+  },
+  "RF|整体法兰|夹套": {
+    "sheet": "突面法兰IF",
+    "image": "image24.png",
+    "annotations": [
+      {
+        "cell": "C33",
+        "x": 0.688485,
+        "y": 0.421632,
+        "width": 0.151056,
+        "height": 0.038548,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "I31",
+        "x": 0.23663,
+        "y": 0.596404,
+        "width": 0.15927,
+        "height": 0.035648,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "I33",
+        "x": 0.391223,
+        "y": 0.577505,
+        "width": 0.053908,
+        "height": 0.072325,
+        "align": "left",
+        "rotation": 0.0,
+        "fontScale": 0.023055
+      },
+      {
+        "cell": "E31",
+        "x": 0.230698,
+        "y": 0.660496,
+        "width": 0.167085,
+        "height": 0.035554,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "E33",
+        "x": 0.383921,
+        "y": 0.637853,
+        "width": 0.053851,
+        "height": 0.077845,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.023055
+      },
+      {
+        "cell": "D31",
+        "x": 0.208336,
+        "y": 0.709991,
+        "width": 0.186024,
+        "height": 0.050618,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "D33",
+        "x": 0.38472,
+        "y": 0.700448,
+        "width": 0.053908,
+        "height": 0.071202,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.023055
+      },
+      {
+        "cell": "J29",
+        "x": 0.104742,
+        "y": 0.63776,
+        "width": 0.068397,
+        "height": 0.03518,
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "J33",
+        "x": 0.112614,
+        "y": 0.542325,
+        "width": 0.049344,
+        "height": 0.076255,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.023055
+      },
+      {
+        "cell": "N29",
+        "x": 0.147697,
+        "y": 0.554301,
+        "width": 0.108215,
+        "height": 0.035648,
+        "align": "left",
+        "rotation": 0.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "F33",
+        "x": 0.317691,
+        "y": 0.125685,
+        "width": 0.215745,
+        "height": 0.035648,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "M31",
+        "x": 0.05517,
+        "y": 0.397768,
+        "width": 0.103993,
+        "height": 0.035648,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "K29",
+        "x": 0.502404,
+        "y": 0.419382,
+        "width": 0.208044,
+        "height": 0.035648,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "L29",
+        "x": 0.486716,
+        "y": 0.406938,
+        "width": 0.311352,
+        "height": 0.035648,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.028818
+      },
+      {
+        "cell": "C29",
+        "x": 0.304172,
+        "y": 0.5325,
+        "width": 0.160867,
+        "height": 0.035648,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.028818
+      }
+    ],
+    "details": [
+      {
+        "image": "image25.png",
+        "x": 0.672969,
+        "y": 0.240998,
+        "width": 0.190816,
+        "height": 0.248046,
+        "crop": {
+          "left": 0.06763,
+          "top": 0.0,
+          "right": 0.03488,
+          "bottom": 0.0
+        }
+      }
+    ]
+  },
+  "F|整体法兰|夹套": {
+    "sheet": "凹面法兰IF",
+    "image": "image31.png",
+    "annotations": [
+      {
+        "cell": "C33",
+        "x": 0.725474,
+        "y": 0.445544,
+        "width": 0.221264,
+        "height": 0.04092,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "L31",
+        "x": 0.293947,
+        "y": 0.609395,
+        "width": 0.125549,
+        "height": 0.03957,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "L33",
+        "x": 0.400229,
+        "y": 0.590805,
+        "width": 0.06352,
+        "height": 0.074259,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.022923
+      },
+      {
+        "cell": "I31",
+        "x": 0.295688,
+        "y": 0.669321,
+        "width": 0.121198,
+        "height": 0.03957,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "I33",
+        "x": 0.40085,
+        "y": 0.653119,
+        "width": 0.06352,
+        "height": 0.074259,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.022923
+      },
+      {
+        "cell": "E31",
+        "x": 0.301157,
+        "y": 0.729248,
+        "width": 0.119023,
+        "height": 0.03957,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "E33",
+        "x": 0.401658,
+        "y": 0.712942,
+        "width": 0.06352,
+        "height": 0.074362,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.022923
+      },
+      {
+        "cell": "D31",
+        "x": 0.295377,
+        "y": 0.793743,
+        "width": 0.123249,
+        "height": 0.03957,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "D33",
+        "x": 0.400788,
+        "y": 0.777438,
+        "width": 0.06352,
+        "height": 0.074362,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.022923
+      },
+      {
+        "cell": "C29",
+        "x": 0.317628,
+        "y": 0.549469,
+        "width": 0.184159,
+        "height": 0.03957,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "F33",
+        "x": 0.308243,
+        "y": 0.143176,
+        "width": 0.318222,
+        "height": 0.039466,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "O31",
+        "x": 0.044404,
+        "y": 0.388489,
+        "width": 0.096834,
+        "height": 0.03957,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "J29",
+        "x": 0.062677,
+        "y": 0.683654,
+        "width": 0.127662,
+        "height": 0.03957,
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "J33",
+        "x": 0.097358,
+        "y": 0.52984,
+        "width": 0.054073,
+        "height": 0.102612,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.022923
+      },
+      {
+        "cell": "P29",
+        "x": 0.140616,
+        "y": 0.583846,
+        "width": 0.119955,
+        "height": 0.039466,
+        "align": "left",
+        "rotation": 0.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "N29",
+        "x": 0.612294,
+        "y": 0.417465,
+        "width": 0.192922,
+        "height": 0.039466,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "M29",
+        "x": 0.585631,
+        "y": 0.430344,
+        "width": 0.162032,
+        "height": 0.03957,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "K29",
+        "x": 0.427638,
+        "y": 0.424112,
+        "width": 0.031947,
+        "height": 0.03957,
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.028653
+      },
+      {
+        "cell": "K33",
+        "x": 0.416948,
+        "y": 0.36294,
+        "width": 0.049784,
+        "height": 0.074259,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.022923
+      }
+    ],
+    "details": [
+      {
+        "image": "image25.png",
+        "x": 0.739272,
+        "y": 0.252327,
+        "width": 0.207901,
+        "height": 0.270246,
+        "crop": {
+          "left": 0.06761,
+          "top": 0.0,
+          "right": 0.03487,
+          "bottom": 0.0
+        }
+      }
+    ]
+  },
+  "M|整体法兰|夹套": {
+    "sheet": "凸面法兰IF",
+    "image": "image24.png",
+    "annotations": [
+      {
+        "cell": "C29",
+        "x": 0.321106,
+        "y": 0.534694,
+        "width": 0.127869,
+        "height": 0.036877,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "J31",
+        "x": 0.267467,
+        "y": 0.596737,
+        "width": 0.118142,
+        "height": 0.036877,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "J33",
+        "x": 0.374859,
+        "y": 0.573991,
+        "width": 0.058189,
+        "height": 0.075787,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.022989
+      },
+      {
+        "cell": "E31",
+        "x": 0.246876,
+        "y": 0.660231,
+        "width": 0.138733,
+        "height": 0.036877,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "E33",
+        "x": 0.375428,
+        "y": 0.639905,
+        "width": 0.058133,
+        "height": 0.076658,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.022989
+      },
+      {
+        "cell": "D31",
+        "x": 0.235216,
+        "y": 0.719564,
+        "width": 0.150394,
+        "height": 0.036877,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "D33",
+        "x": 0.375428,
+        "y": 0.701754,
+        "width": 0.058133,
+        "height": 0.075496,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.022989
+      },
+      {
+        "cell": "N29",
+        "x": 0.147619,
+        "y": 0.5526,
+        "width": 0.195842,
+        "height": 0.03678,
+        "align": "left",
+        "rotation": 0.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "M31",
+        "x": 0.028054,
+        "y": 0.399382,
+        "width": 0.155172,
+        "height": 0.036877,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "K29",
+        "x": 0.544877,
+        "y": 0.416901,
+        "width": 0.132533,
+        "height": 0.036877,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "L29",
+        "x": 0.57474,
+        "y": 0.410319,
+        "width": 0.139188,
+        "height": 0.036877,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "F33",
+        "x": 0.29659,
+        "y": 0.126627,
+        "width": 0.26865,
+        "height": 0.036877,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "C33",
+        "x": 0.704656,
+        "y": 0.456071,
+        "width": 0.120873,
+        "height": 0.041329,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "I29",
+        "x": 0.083115,
+        "y": 0.667974,
+        "width": 0.106425,
+        "height": 0.036393,
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.028736
+      },
+      {
+        "cell": "I33",
+        "x": 0.108143,
+        "y": 0.53121,
+        "width": 0.055914,
+        "height": 0.079755,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.022989
+      }
+    ],
+    "details": [
+      {
+        "image": "image25.png",
+        "x": 0.67212,
+        "y": 0.27706,
+        "width": 0.1988,
+        "height": 0.250257,
+        "crop": {
+          "left": 0.037,
+          "top": 0.0,
+          "right": 0.03622,
+          "bottom": 0.0
+        }
+      }
+    ]
+  },
+  "RJ|整体法兰|夹套": {
+    "sheet": "环连接面法兰IF",
+    "image": "image37.png",
+    "annotations": [
+      {
+        "cell": "J29",
+        "x": 0.636234,
+        "y": 0.235782,
+        "width": 0.064865,
+        "height": 0.038037,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "J33",
+        "x": 0.68602,
+        "y": 0.220507,
+        "width": 0.063772,
+        "height": 0.071481,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017335
+      },
+      {
+        "cell": "M29",
+        "x": 0.597384,
+        "y": 0.54926,
+        "width": 0.168408,
+        "height": 0.038037,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "M33",
+        "x": 0.746971,
+        "y": 0.532488,
+        "width": 0.058822,
+        "height": 0.071381,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017335
+      },
+      {
+        "cell": "N29",
+        "x": 0.799059,
+        "y": 0.615549,
+        "width": 0.081902,
+        "height": 0.038037,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "C29",
+        "x": 0.315821,
+        "y": 0.505632,
+        "width": 0.12363,
+        "height": 0.037937,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "K31",
+        "x": 0.264251,
+        "y": 0.564634,
+        "width": 0.126853,
+        "height": 0.038037,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "K33",
+        "x": 0.376082,
+        "y": 0.547962,
+        "width": 0.058822,
+        "height": 0.071481,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017335
+      },
+      {
+        "cell": "I31",
+        "x": 0.254984,
+        "y": 0.617945,
+        "width": 0.136925,
+        "height": 0.038037,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "I33",
+        "x": 0.374067,
+        "y": 0.601173,
+        "width": 0.058822,
+        "height": 0.071481,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017335
+      },
+      {
+        "cell": "E31",
+        "x": 0.229084,
+        "y": 0.672055,
+        "width": 0.163631,
+        "height": 0.038037,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "E33",
+        "x": 0.375506,
+        "y": 0.654185,
+        "width": 0.05888,
+        "height": 0.071381,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017335
+      },
+      {
+        "cell": "D31",
+        "x": 0.206753,
+        "y": 0.724568,
+        "width": 0.186481,
+        "height": 0.037937,
+        "align": "right",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "D33",
+        "x": 0.378039,
+        "y": 0.707696,
+        "width": 0.05888,
+        "height": 0.071381,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.017335
+      },
+      {
+        "cell": "R31",
+        "x": 0.033452,
+        "y": 0.354684,
+        "width": 0.137501,
+        "height": 0.038037,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "F33",
+        "x": 0.300511,
+        "y": 0.104001,
+        "width": 0.221417,
+        "height": 0.038037,
+        "align": "center",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "O33",
+        "x": 0.073799,
+        "y": 0.612754,
+        "width": 0.127371,
+        "height": 0.038436,
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "N33",
+        "x": 0.111728,
+        "y": 0.470291,
+        "width": 0.044548,
+        "height": 0.077072,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.017335
+      },
+      {
+        "cell": "S29",
+        "x": 0.148334,
+        "y": 0.502338,
+        "width": 0.142451,
+        "height": 0.038037,
+        "align": "left",
+        "rotation": 0.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "P29",
+        "x": 0.569124,
+        "y": 0.396315,
+        "width": 0.051282,
+        "height": 0.037937,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "Q29",
+        "x": 0.609413,
+        "y": 0.391722,
+        "width": 0.051225,
+        "height": 0.037537,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "L29",
+        "x": 0.80988,
+        "y": 0.415083,
+        "width": 0.080175,
+        "height": 0.038037,
+        "align": "right",
+        "rotation": 270.0,
+        "fontScale": 0.021668
+      },
+      {
+        "cell": "L33",
+        "x": 0.825995,
+        "y": 0.319243,
+        "width": 0.044606,
+        "height": 0.071481,
+        "align": "center",
+        "rotation": 270.0,
+        "fontScale": 0.017335
+      }
+    ]
   }
 }

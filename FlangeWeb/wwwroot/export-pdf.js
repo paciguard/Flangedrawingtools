@@ -1,4 +1,4 @@
-// Render the current drawings locally, then let the user choose the destination.
+// Render the current drawings locally for an A4 print preview.
 (() => {
   const button = document.querySelector('#print-button');
   const status = document.querySelector('#export-status');
@@ -107,26 +107,43 @@
   }
   button.addEventListener('click', async () => {
     status.textContent = '';
-    if (typeof window.showSaveFilePicker !== 'function') {
-      status.textContent = '请选择 Chrome 或 Edge，并通过 localhost 或 HTTPS 打开工具，以选择 PDF 保存位置。';
-      return;
-    }
     const reports = [...document.querySelectorAll('#results .result')].map((result,i) => ({
       drawing:result.querySelector('.drawing-canvas'),title:i===0?'进口法兰数据（尺寸单位：mm）':'出口法兰数据（尺寸单位：mm）',
       specification:result.querySelector('h3')?.textContent||'',
       fields:[...result.querySelectorAll('.field')].map(field=>({label:field.querySelector('span')?.textContent||'',value:(field.querySelector('strong')?.textContent||'').replace(/[φΦ∅Ø]/g,'⌀')}))
     }));
     if (reports.length !== 2 || reports.some(report=>!report.drawing)) { status.textContent = '请先完成进口和出口法兰选择。'; return; }
+    // Open synchronously from the click, so browser pop-up blockers do not suppress it.
+    const preview = window.open('', '_blank');
+    if (!preview) { status.textContent = '无法打开打印预览，请允许弹出窗口后重试。'; return; }
+    preview.document.title = filename().replace(/\.pdf$/, '');
+    preview.document.body.textContent = '正在生成 A4 图纸预览…';
+    button.disabled = true; status.textContent = '正在生成打印预览…';
+    let url;
     try {
-      const handle = await window.showSaveFilePicker({suggestedName:filename(), types:[{description:'PDF 文件', accept:{'application/pdf':['.pdf']}}]});
-      button.disabled = true; status.textContent = '正在生成 PDF…';
       const bytes = await makePdf(reports);
-      const writable = await handle.createWritable();
-      try { await writable.write(bytes); await writable.close(); }
-      catch (error) { await writable.abort(); throw error; }
-      status.textContent = 'PDF 已保存。';
+      if (preview.closed) { status.textContent = '打印预览已关闭。'; return; }
+      url = URL.createObjectURL(new Blob([bytes], {type:'application/pdf'}));
+      const doc = preview.document;
+      doc.body.innerHTML = '';
+      const style = doc.createElement('style');
+      style.textContent = 'html,body{height:100%;margin:0;font-family:Segoe UI,Microsoft YaHei,sans-serif;background:#e8edf0}body{display:flex;flex-direction:column}.toolbar{display:flex;align-items:center;gap:16px;padding:10px 18px;background:#fff;border-bottom:1px solid #ccd9df}.toolbar button{background:#18576a;color:white;border:0;border-radius:5px;padding:9px 22px;font-size:15px;cursor:pointer}.toolbar span{color:#315363;font-size:13px}iframe{border:0;width:100%;flex:1;min-height:0}';
+      doc.head.append(style);
+      const toolbar = doc.createElement('div'); toolbar.className = 'toolbar';
+      const print = doc.createElement('button'); print.textContent = '打印'; print.type = 'button';
+      const info = doc.createElement('span'); info.textContent = 'A4 纵向 · 点击打印后选择打印机';
+      const frame = doc.createElement('iframe'); frame.title = '图纸打印预览'; frame.src = url;
+      print.addEventListener('click', () => {
+        try { frame.contentWindow.focus(); frame.contentWindow.print(); }
+        catch { info.textContent = '请使用预览工具栏中的打印按钮选择打印机。'; }
+      });
+      toolbar.append(print, info); doc.body.append(toolbar, frame);
+      preview.addEventListener('pagehide', () => URL.revokeObjectURL(url), {once:true});
+      status.textContent = '打印预览已打开。';
     } catch (error) {
-      if (error.name !== 'AbortError') status.textContent = 'PDF 导出失败：' + (error.message || '未知错误');
+      if (url) URL.revokeObjectURL(url);
+      if (!preview.closed) preview.close();
+      status.textContent = '无法生成打印预览：' + (error.message || '未知错误');
     } finally { button.disabled = false; }
   });
 })();

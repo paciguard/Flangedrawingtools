@@ -1035,5 +1035,234 @@
       "tolerance": "承插深度\nT",
       "suffix": ""
     }
+  },
+  "RF|整体法兰|夹套": {
+    "I31": {
+      "index": 10,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "E31": {
+      "index": 5,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "C29": {
+      "index": 3,
+      "suffix": "(注1)"
+    },
+    "D31": {
+      "index": 4,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "J29": {
+      "index": 11,
+      "suffix": ""
+    },
+    "I33": {
+      "tolerance": "法兰密封面\nd",
+      "suffix": ""
+    },
+    "E33": {
+      "tolerance": "法兰螺栓孔中心圆直径\nK",
+      "suffix": ""
+    },
+    "D33": {
+      "tolerance": "法兰外径\nD",
+      "suffix": ""
+    },
+    "J33": {
+      "tolerance": "密封面\nf1",
+      "suffix": ""
+    },
+    "C33": {
+      "tolerance": "节距",
+      "suffix": ""
+    },
+    "F33": {
+      "tolerance": "车刀矫正",
+      "suffix": "(注2)"
+    }
+  },
+  "F|整体法兰|夹套": {
+    "C29": {
+      "index": 3,
+      "suffix": "(注1)"
+    },
+    "L31": {
+      "index": 27,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "I31": {
+      "index": 10,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "E31": {
+      "index": 5,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "D31": {
+      "index": 4,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "J29": {
+      "index": 23,
+      "suffix": ""
+    },
+    "K29": {
+      "index": 25,
+      "suffix": ""
+    },
+    "L33": {
+      "tolerance": "凹面直径\nY",
+      "suffix": ""
+    },
+    "I33": {
+      "tolerance": "法兰密封面\nd",
+      "suffix": ""
+    },
+    "E33": {
+      "tolerance": "法兰螺栓孔中心圆直径\nK",
+      "suffix": ""
+    },
+    "D33": {
+      "tolerance": "法兰外径\nD",
+      "suffix": ""
+    },
+    "J33": {
+      "tolerance": "密封面\nf1",
+      "suffix": ""
+    },
+    "F33": {
+      "tolerance": "车刀矫正",
+      "suffix": "(注2)"
+    }
+  },
+  "M|整体法兰|夹套": {
+    "I29": {
+      "index": 24,
+      "suffix": ""
+    },
+    "C29": {
+      "index": 3,
+      "suffix": "(注1)"
+    },
+    "J31": {
+      "index": 26,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "E31": {
+      "index": 5,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "D31": {
+      "index": 4,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "I33": {
+      "tolerance": "密封面f2，f3",
+      "suffix": ""
+    },
+    "J33": {
+      "tolerance": "凸面直径\nX",
+      "suffix": ""
+    },
+    "E33": {
+      "tolerance": "法兰螺栓孔中心圆直径\nK",
+      "suffix": ""
+    },
+    "D33": {
+      "tolerance": "法兰外径\nD",
+      "suffix": ""
+    },
+    "C33": {
+      "tolerance": "节距",
+      "suffix": ""
+    },
+    "F33": {
+      "tolerance": "车刀矫正",
+      "suffix": "(注2)"
+    }
+  },
+  "RJ|整体法兰|夹套": {
+    "C29": {
+      "index": 3,
+      "suffix": "(注1)"
+    },
+    "K31": {
+      "index": 24,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "I31": {
+      "index": 10,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "E31": {
+      "index": 5,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "D31": {
+      "index": 4,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "J29": {
+      "index": 23,
+      "suffix": ""
+    },
+    "M29": {
+      "index": 26,
+      "suffix": ""
+    },
+    "N29": {
+      "constant": "23°±0.5°"
+    },
+    "L29": {
+      "index": 25,
+      "suffix": ""
+    },
+    "K33": {
+      "tolerance": "环连接槽\nP",
+      "suffix": ""
+    },
+    "I33": {
+      "tolerance": "法兰密封面\nd",
+      "suffix": ""
+    },
+    "E33": {
+      "tolerance": "法兰螺栓孔中心圆直径\nK",
+      "suffix": ""
+    },
+    "D33": {
+      "tolerance": "法兰外径\nD",
+      "suffix": ""
+    },
+    "J33": {
+      "tolerance": "环连接槽\nR",
+      "suffix": ""
+    },
+    "M33": {
+      "tolerance": "环连接槽宽度\nF",
+      "suffix": ""
+    },
+    "L33": {
+      "tolerance": "环连接槽深度\nE",
+      "suffix": ""
+    },
+    "F33": {
+      "tolerance": "车刀矫正",
+      "suffix": "(注2)"
+    }
   }
 }
