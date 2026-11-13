@@ -6,9 +6,13 @@ ASP.NET Core 8 项目。在本目录运行 `dotnet run`，访问终端显示的�
 
 图形是从原工作簿转换的参考图片，不含动态尺寸标注。原工作簿的全部校验、保温计算、命名范围绘图逻辑、尺寸标注、技术要求、单双法兰输出与导出尚未迁移。不得用于制造出图。
 
-公开仓库的当前版本缺少 Data/flanges.json、Data/options.json 与绘图图片；它们保留在本地工作目录，因此克隆后需要提供这些文件才能完整显示原型。
+公开仓库的当前版本缺少 Data/flanges.json、Data/options.json、Data/drawing-metadata.json 与绘图图片；它们保留在本地工作目录，因此克隆后需要提供这些文件才能完整显示原型。
 
 
 服务器提供 `/api/lookup`：按标准、压力、DN、密封面和连接型式查找对应数据源，并对突面法兰厚度提供有限试算。非突面计算、组合校验和绘图输出仍需实现。接口未在本环境完成 HTTP 端到端测试。
 
 Visual Studio：打开 `FlangeWeb.sln`。在仓库根目录执行 `dotnet run --project FlangeWeb.Checks` 可运行已实现的厚度计算检查。凹面、凸面和环连接面的试算目前仅支持整体法兰；输入缺失时返回空值。所有计算须与原工作簿及标准核对后方可使用。
+
+绘图源映射：Data/drawing-metadata.json 从工作簿的 12 个模板提取图形文本框的单元格链接、公式和相对位置。网页当前只对整体法兰链接部分主要尺寸；公差、完整注释、保温法兰、对焊/承插焊和导出尚未完成。在仓库根目录执行 `node FlangeWeb.Checks/annotation-check.cjs` 可检查 RF 整体法兰的数据标签连接。
+
+
