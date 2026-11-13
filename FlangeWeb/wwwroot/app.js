@@ -10,7 +10,7 @@ function render(){document.querySelector('#results').innerHTML=[...tbody.rows].m
 Promise.all(['/api/data','/api/options','/api/drawing-metadata'].map(url=>fetch(url).then(r=>{if(!r.ok)throw Error('无法读取 '+url);return r.json()}))).then(([d,o,m])=>{data=d;options=o;drawingMetadata=m;init()}).catch(e=>{document.querySelector('#results').textContent='数据加载失败：'+e.message});
 
 
-let renderVersion=0;const baseRender=render;render=function(){baseRender();const version=++renderVersion;for(const [i,tr] of [...tbody.rows].entries()){const val=c=>tr.querySelector('.'+c).value;const params=new URLSearchParams({standard:val('standard'),pressure:val('pressure'),dn:val('dn'),face:val('face'),type:val('type')});fetch('/api/lookup?'+params).then(async response=>({ok:response.ok,body:await response.json()})).then(({ok,body})=>{if(version!==renderVersion)return;const result=document.querySelectorAll('#results .result')[i];if(!result)return;const line=document.createElement('p');line.className='calc-note';line.textContent=ok?(body.displayedThickness===null?'厚度计算：此组合尚未实现，请核对原工作簿。':`显示厚度试算：${body.displayedThickness} mm（待核对）`):body.error;result.insertBefore(line,result.querySelector('.fields'));if(ok)drawAnnotations(result,tr,body)}).catch(()=>{})}};
+let renderVersion=0;const baseRender=render;render=function(){baseRender();const version=++renderVersion;for(const [i,tr] of [...tbody.rows].entries()){const val=c=>tr.querySelector('.'+c).value;const params=new URLSearchParams({standard:val('standard'),pressure:val('pressure'),dn:val('dn'),face:val('face'),type:val('type'),insulation:val('insulation')});fetch('/api/lookup?'+params).then(async response=>({ok:response.ok,body:await response.json()})).then(({ok,body})=>{if(version!==renderVersion)return;const result=document.querySelectorAll('#results .result')[i];if(!result)return;const line=document.createElement('p');line.className='calc-note';line.textContent=ok?(body.displayedThickness===null?'厚度计算：此组合尚未实现，请核对原工作簿。':`显示厚度试算：${body.displayedThickness} mm（待核对）`):body.error;result.insertBefore(line,result.querySelector('.fields'));if(ok)drawAnnotations(result,tr,body)}).catch(()=>{})}};
 
 
 function drawAnnotations(result,tr,body){
@@ -27,3 +27,5 @@ function drawAnnotations(result,tr,body){
  const note=document.createElement('p');note.className='calc-note';note.textContent='试验性尺寸链接：仅显示已映射值；公差、全部注释及保温法兰尚未完成。';result.querySelector('.drawing').append(note)
 }
 
+
+document.querySelector('#print-button').addEventListener('click',()=>{const get=id=>document.getElementById(id).value||'—';document.querySelector('#print-meta').textContent=`合同号 ${get('contract')}  ·  泵型号 ${get('model')}  ·  位号 ${get('position')}  ·  零件 ${get('part')}`;window.print()});

@@ -1,1 +1,2 @@
-<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup><ItemGroup><Compile Include="../FlangeWeb/ThicknessRules.cs" Link="ThicknessRules.cs" /></ItemGroup></Project>
+<Project Sdk="Microsoft.NET.Sdk"><PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><ImplicitUsings>enable</ImplicitUsings><Nullable>enable</Nullable></PropertyGroup><ItemGroup><Compile Include="../FlangeWeb/ThicknessRules.cs" Link="ThicknessRules.cs" /><Compile Include="../FlangeWeb/CombinationRules.cs" Link="CombinationRules.cs" /></ItemGroup></Project>
+
