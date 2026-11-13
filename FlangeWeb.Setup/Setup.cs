@@ -37,6 +37,40 @@ internal static class Setup
         t.InvokeMember("Description", BindingFlags.SetProperty, null, link, new object[] { Product });
         t.InvokeMember("Save", BindingFlags.InvokeMethod, null, link, null);
     }
+    private static void StopRunningApplication(string root, bool interactive)
+    {
+        var running = new List<Process>();
+        try
+        {
+            foreach (string name in new[] { "FlangeDrawingTool", "FlangeWeb" })
+            {
+                string expected = Path.GetFullPath(Path.Combine(root, name + ".exe"));
+                foreach (Process process in Process.GetProcessesByName(name))
+                {
+                    try
+                    {
+                        if (!process.HasExited && String.Equals(Path.GetFullPath(process.MainModule.FileName), expected, StringComparison.OrdinalIgnoreCase)) running.Add(process);
+                        else process.Dispose();
+                    }
+                    catch (System.ComponentModel.Win32Exception) { process.Dispose(); }
+                    catch (InvalidOperationException) { process.Dispose(); }
+                }
+            }
+            if (running.Count == 0) return;
+            if (interactive && MessageBox.Show("法兰图纸工具正在运行。继续安装或卸载前需要关闭它，未导出的输入可能丢失。是否继续？", Product, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+                throw new OperationCanceledException();
+            // Only stop processes whose executable is in this exact installation directory.
+            foreach (Process process in running)
+            {
+                try
+                {
+                    if (!process.HasExited) { process.Kill(); if (!process.WaitForExit(10000)) throw new IOException("无法关闭正在运行的法兰图纸工具。"); }
+                }
+                catch (InvalidOperationException) { }
+            }
+        }
+        finally { foreach (Process process in running) process.Dispose(); }
+    }
     private static void Install(string directory, bool shortcuts, bool desktop)
     {
         string root = Path.GetFullPath(directory);
@@ -52,6 +86,7 @@ internal static class Setup
         }
         if (Directory.Exists(root) && Directory.EnumerateFileSystemEntries(root).Any() && !File.Exists(manifest))
             throw new InvalidOperationException("安装目录不是空目录，请选择新的空目录。");
+        StopRunningApplication(root, shortcuts);
         Directory.CreateDirectory(root);
         var paths = File.Exists(manifest) ? new List<string>(File.ReadAllLines(manifest, Encoding.UTF8)) : new List<string>();
         try
@@ -61,6 +96,15 @@ internal static class Setup
                 if (stream == null) throw new InvalidOperationException("安装包数据缺失。");
                 using (var archive = new ZipArchive(stream, ZipArchiveMode.Read))
                 {
+                    // Check existing files before writing any of them, so an in-use file cannot cause a partial update.
+                    foreach (var entry in archive.Entries)
+                    {
+                        if (String.IsNullOrEmpty(entry.Name)) continue;
+                        string target = FullTarget(root, entry.FullName.Replace('/', Path.DirectorySeparatorChar));
+                        if (!File.Exists(target)) continue;
+                        try { using (var check = new FileStream(target, FileMode.Open, FileAccess.ReadWrite, FileShare.None)) { } }
+                        catch (IOException ex) { throw new IOException("文件正在使用中，请关闭占用该文件的程序后重试：" + target, ex); }
+                    }
                     foreach (var entry in archive.Entries)
                     {
                         if (String.IsNullOrEmpty(entry.Name)) continue;
@@ -95,6 +139,7 @@ internal static class Setup
         string root = Path.GetFullPath(directory);
         string manifest = Path.Combine(root, ManifestName);
         if (!File.Exists(manifest)) throw new InvalidOperationException("未找到安装记录，无法卸载。");
+        StopRunningApplication(root, shortcuts);
         string self = Path.GetFullPath(Assembly.GetExecutingAssembly().Location);
         var folders = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         bool deleteSelf = false;
@@ -141,6 +186,7 @@ internal static class Setup
         {
             if (MessageBox.Show("卸载法兰图纸生成工具？", Product, MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return 0;
             try { Remove(AppDomain.CurrentDomain.BaseDirectory.TrimEnd(Path.DirectorySeparatorChar), true); MessageBox.Show("卸载完成。", Product); return 0; }
+            catch (OperationCanceledException) { return 0; }
             catch (Exception ex) { MessageBox.Show(ex.Message, "卸载失败", MessageBoxButtons.OK, MessageBoxIcon.Error); return 1; }
         }
         using (var form = new Form { Text = Product + " - 安装", ClientSize = new Size(540, 205), FormBorderStyle = FormBorderStyle.FixedDialog, MaximizeBox = false, StartPosition = FormStartPosition.CenterScreen })
@@ -162,7 +208,8 @@ internal static class Setup
                 try { install.Enabled = false; form.UseWaitCursor = true; Application.DoEvents(); Install(path.Text, true, desktop.Checked); form.UseWaitCursor = false;
                     if (MessageBox.Show("安装完成。现在打开工具？", Product, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes) Process.Start(Path.Combine(Path.GetFullPath(path.Text), "FlangeDrawingTool.exe"));
                     form.DialogResult = DialogResult.OK; form.Close();
-                } catch (Exception ex) { form.UseWaitCursor = false; install.Enabled = true; MessageBox.Show(ex.Message, "安装失败", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                } catch (OperationCanceledException) { form.UseWaitCursor = false; install.Enabled = true; }
+                catch (Exception ex) { form.UseWaitCursor = false; install.Enabled = true; MessageBox.Show(ex.Message, "安装失败", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             };
             form.Controls.AddRange(new Control[] { logo, heading, label, path, browse, desktop, install, cancel }); form.AcceptButton = install; form.CancelButton = cancel; Application.Run(form);
             if (logo.Image != null) logo.Image.Dispose();
