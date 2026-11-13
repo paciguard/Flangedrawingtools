@@ -6,6 +6,7 @@ var app = builder.Build();
 app.UseDefaultFiles(); app.UseStaticFiles();
 string FileInData(string name) => Path.Combine(app.Environment.ContentRootPath, "Data", name);
 app.MapGet("/api/data", async () => Results.Text(await File.ReadAllTextAsync(FileInData("flanges.json")), "application/json; charset=utf-8"));
+app.MapGet("/api/annotation-bindings", async () => Results.Text(await File.ReadAllTextAsync(FileInData("annotation-bindings.json")), "application/json; charset=utf-8"));
 app.MapGet("/api/drawing-metadata", async () => Results.Text(await File.ReadAllTextAsync(FileInData("drawing-metadata.json")), "application/json; charset=utf-8"));
 app.MapGet("/api/options", async () => Results.Text(await File.ReadAllTextAsync(FileInData("options.json")), "application/json; charset=utf-8"));
 app.MapGet("/api/lookup", async (string standard, string pressure, string dn, string face, string type, string? insulation) => {
@@ -30,5 +31,6 @@ app.MapGet("/api/lookup", async (string standard, string pressure, string dn, st
     return Results.Ok(new { sheet, headers = table["headers"], row, displayedThickness, note = "尺寸试算待核对，不可用于制造" });
 });
 app.Run();
+
 
 

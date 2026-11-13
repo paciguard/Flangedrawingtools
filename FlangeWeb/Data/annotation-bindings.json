@@ -1,0 +1,567 @@
+{
+  "RF|整体法兰": {
+    "I31": {
+      "index": 10,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "E31": {
+      "index": 5,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "C29": {
+      "index": 3,
+      "suffix": "(注1)"
+    },
+    "D31": {
+      "index": 4,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "F29": {
+      "index": 6,
+      "suffix": ""
+    },
+    "J29": {
+      "index": 11,
+      "suffix": ""
+    }
+  },
+  "RF|对焊法兰": {
+    "L30": {
+      "constant": "B"
+    },
+    "I30": {
+      "index": 10,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "N30": {
+      "index": 18,
+      "suffix": "",
+      "prefix": "R"
+    },
+    "M30": {
+      "index": 17,
+      "suffix": "",
+      "prefix": "R"
+    },
+    "F28": {
+      "index": 6,
+      "suffix": ""
+    },
+    "Q28": {
+      "index": 23,
+      "suffix": ""
+    },
+    "E30": {
+      "index": 5,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "J28": {
+      "index": 11,
+      "suffix": ""
+    },
+    "D30": {
+      "index": 4,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "K30": {
+      "index": 12,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "P30": {
+      "index": 21,
+      "suffix": "",
+      "prefix": "φ"
+    }
+  },
+  "RF|承插焊法兰": {
+    "L30": {
+      "constant": "B"
+    },
+    "I30": {
+      "index": 10,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "E30": {
+      "index": 5,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "D30": {
+      "index": 4,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "J28": {
+      "index": 11,
+      "suffix": ""
+    },
+    "N30": {
+      "index": 17,
+      "suffix": "",
+      "prefix": "R"
+    },
+    "F28": {
+      "index": 6,
+      "suffix": ""
+    },
+    "P30": {
+      "constant": "B1"
+    },
+    "K30": {
+      "index": 13,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "M28": {
+      "index": 16,
+      "suffix": ""
+    }
+  },
+  "F|整体法兰": {
+    "C29": {
+      "index": 3,
+      "suffix": "(注1)"
+    },
+    "L31": {
+      "index": 27,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "I31": {
+      "index": 10,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "E31": {
+      "index": 5,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "D31": {
+      "index": 4,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "J29": {
+      "index": 23,
+      "suffix": ""
+    },
+    "K29": {
+      "index": 25,
+      "suffix": ""
+    },
+    "F29": {
+      "index": 6,
+      "suffix": ""
+    }
+  },
+  "F|对焊法兰": {
+    "K30": {
+      "constant": "B"
+    },
+    "S30": {
+      "index": 27,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "I30": {
+      "index": 10,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "E30": {
+      "index": 5,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "D30": {
+      "index": 4,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "O30": {
+      "index": 20,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "J30": {
+      "index": 11,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "Q28": {
+      "index": 23,
+      "suffix": ""
+    },
+    "F28": {
+      "index": 6,
+      "suffix": ""
+    },
+    "L30": {
+      "index": 16,
+      "suffix": "",
+      "prefix": "R"
+    },
+    "M30": {
+      "index": 17,
+      "suffix": "",
+      "prefix": "R"
+    },
+    "P28": {
+      "index": 22,
+      "suffix": ""
+    },
+    "R28": {
+      "index": 25,
+      "suffix": ""
+    }
+  },
+  "F|承插焊法兰": {
+    "K30": {
+      "constant": "B"
+    },
+    "R30": {
+      "index": 27,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "I30": {
+      "index": 10,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "E30": {
+      "index": 5,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "D30": {
+      "index": 4,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "P28": {
+      "index": 23,
+      "suffix": ""
+    },
+    "Q28": {
+      "index": 25,
+      "suffix": ""
+    },
+    "O30": {
+      "constant": "B1"
+    },
+    "J30": {
+      "index": 12,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "F28": {
+      "index": 6,
+      "suffix": ""
+    },
+    "L28": {
+      "index": 15,
+      "suffix": ""
+    },
+    "M30": {
+      "index": 16,
+      "suffix": "",
+      "prefix": "R"
+    }
+  },
+  "M|整体法兰": {
+    "I29": {
+      "index": 24,
+      "suffix": ""
+    },
+    "C29": {
+      "index": 3,
+      "suffix": "(注1)"
+    },
+    "J31": {
+      "index": 26,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "E31": {
+      "index": 5,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "D31": {
+      "index": 4,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "F29": {
+      "index": 6,
+      "suffix": ""
+    }
+  },
+  "M|对焊法兰": {
+    "J30": {
+      "constant": "B"
+    },
+    "Q30": {
+      "index": 26,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "E30": {
+      "index": 5,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "D30": {
+      "index": 4,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "F28": {
+      "index": 6,
+      "suffix": ""
+    },
+    "N30": {
+      "index": 20,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "I30": {
+      "index": 11,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "K30": {
+      "index": 16,
+      "suffix": "",
+      "prefix": "R"
+    },
+    "L30": {
+      "index": 17,
+      "suffix": "",
+      "prefix": "R"
+    },
+    "P28": {
+      "index": 24,
+      "suffix": ""
+    },
+    "O28": {
+      "index": 22,
+      "suffix": ""
+    }
+  },
+  "M|承插焊法兰": {
+    "J30": {
+      "constant": "B"
+    },
+    "Q30": {
+      "index": 26,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "E30": {
+      "index": 5,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "D30": {
+      "index": 4,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "O30": {
+      "constant": "B1"
+    },
+    "I30": {
+      "index": 12,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "L30": {
+      "index": 16,
+      "suffix": "",
+      "prefix": "R"
+    },
+    "K28": {
+      "index": 15,
+      "suffix": ""
+    },
+    "F28": {
+      "index": 6,
+      "suffix": ""
+    },
+    "P28": {
+      "index": 24,
+      "suffix": ""
+    }
+  },
+  "RJ|整体法兰": {
+    "C29": {
+      "index": 3,
+      "suffix": "(注1)"
+    },
+    "K31": {
+      "index": 24,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "I31": {
+      "index": 10,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "E31": {
+      "index": 5,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "D31": {
+      "index": 4,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "F29": {
+      "index": 6,
+      "suffix": ""
+    },
+    "J29": {
+      "index": 23,
+      "suffix": ""
+    },
+    "M29": {
+      "index": 26,
+      "suffix": ""
+    },
+    "N29": {
+      "constant": "23°±0.5°"
+    },
+    "L29": {
+      "index": 25,
+      "suffix": ""
+    }
+  },
+  "RJ|对焊法兰": {
+    "R30": {
+      "index": 24,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "I30": {
+      "index": 10,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "E30": {
+      "index": 5,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "D30": {
+      "index": 4,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "K30": {
+      "constant": "B"
+    },
+    "O30": {
+      "index": 20,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "J30": {
+      "index": 11,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "F28": {
+      "index": 6,
+      "suffix": ""
+    },
+    "L30": {
+      "index": 16,
+      "suffix": "",
+      "prefix": "R"
+    },
+    "M30": {
+      "index": 17,
+      "suffix": "",
+      "prefix": "R"
+    },
+    "P28": {
+      "index": 22,
+      "suffix": ""
+    },
+    "Q28": {
+      "index": 23,
+      "suffix": ""
+    },
+    "T28": {
+      "index": 26,
+      "suffix": ""
+    }
+  },
+  "RJ|承插焊法兰": {
+    "Q30": {
+      "index": 24,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "I30": {
+      "index": 10,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "E30": {
+      "index": 5,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "D30": {
+      "index": 4,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "K30": {
+      "constant": "B"
+    },
+    "J30": {
+      "index": 12,
+      "suffix": "",
+      "prefix": "φ"
+    },
+    "O30": {
+      "constant": "B1"
+    },
+    "P28": {
+      "index": 23,
+      "suffix": ""
+    },
+    "S28": {
+      "index": 26,
+      "suffix": ""
+    },
+    "F28": {
+      "index": 6,
+      "suffix": ""
+    },
+    "M30": {
+      "index": 16,
+      "suffix": "",
+      "prefix": "R"
+    },
+    "L28": {
+      "index": 15,
+      "suffix": ""
+    }
+  }
+}
