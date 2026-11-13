@@ -1,3 +1,53 @@
-1�a��'���*'�ب���{`�����:jǺ�+k�x8X�y�t	e+^���[�=�a.+^�ب�ƥ�)�E�YA�׬�+aժ�g���^�
-+��z�"�ק��u�mz�Mt2'+����0z��zYB����W���^�_vׯ4�AejxY���
-�֩�;
+const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const unique=a=>[...new Set(a.filter(x=>x!==null&&x!==undefined&&x!==''))];
+const opt=(values,old)=>values.map(x=>`<option value="${esc(x)}" ${x===old?'selected':''}>${esc(x)}</option>`).join('');
+const templates={RF:{'整体法兰':23,'对焊法兰':27,'承插焊法兰':29},F:{'整体法兰':30,'对焊法兰':32,'承插焊法兰':33},M:{'整体法兰':34,'对焊法兰':27,'承插焊法兰':35},RJ:{'整体法兰':36,'对焊法兰':38,'承插焊法兰':40}};
+let data,options,drawingMetadata,annotationBindings;const tbody=document.querySelector('#inputs');
+function faceKind(s){if(s.includes('/RF')||s.endsWith('/B'))return 'RF';if(s.endsWith('/F'))return 'F';if(s.endsWith('/M')||s.endsWith('/E'))return 'M';return 'RJ'}
+function init(){tbody.innerHTML=['进口法兰/单个法兰','出口法兰'].map((x,i)=>`<tr data-index="${i}"><td>${x}</td><td><select class="standard"></select></td><td><select class="pressure"></select></td><td><select class="type"></select></td><td><select class="dn"></select></td><td><select class="face"></select></td><td><select class="insulation"><option>无</option><option>有</option></select></td></tr>`).join('');for(const [i,tr] of [...tbody.rows].entries()){tr.querySelector('.standard').innerHTML=opt(options.standards,'GB9124.1-19');refresh(tr,true);tr.querySelector('.dn').value=i?'DN125':'DN150';tr.querySelector('.face').value=i?'突面/RF':'凹面/F';tr.addEventListener('change',e=>{if(e.target.classList.contains('standard')||e.target.classList.contains('pressure')||e.target.classList.contains('dn'))refresh(tr,false);if(tr.querySelector('.standard').value.includes('夹套'))tr.querySelector('.insulation').value='有';render()})}render()}
+function refresh(tr,initial){let s=tr.querySelector('.standard').value;for(const [c,table] of [['pressure','pressure'],['type','types'],['dn','size'],['face','faces']]){const el=tr.querySelector('.'+c);let list=options[table][s]||[];if(c==='type'&&s.includes('夹套'))list=list.filter(x=>x==='整体法兰');if(c==='dn'&&s.includes('夹套')){let pressure=tr.querySelector('.pressure').value;list=list.filter(dn=>data['突面法兰数据源'].rows.some(r=>r[1]===s&&r[2]===pressure&&r[3]===dn))}if(c==='face'&&s.includes('夹套')){let pressure=tr.querySelector('.pressure').value,dn=tr.querySelector('.dn').value;list=list.filter(face=>{let kind=faceKind(face),sheet=kind==='RJ'?'环连接面法兰数据源':kind==='RF'?'突面法兰数据源':'凹凸面法兰数据源';return data[sheet].rows.some(r=>r[1]===s&&r[2]===pressure&&r[3]===dn)})}el.innerHTML=opt(list,initial?(c==='pressure'?'PN16':c==='type'?'整体法兰':''):el.value)}const ins=tr.querySelector('.insulation');if(s.includes('夹套'))ins.value='有';ins.disabled=s.includes('夹套')}
+function render(){document.querySelector('#results').innerHTML=[...tbody.rows].map((tr,i)=>{let val=c=>tr.querySelector('.'+c).value;let kind=faceKind(val('face')),sheet=kind==='RJ'?'环连接面法兰数据源':kind==='RF'?'突面法兰数据源':'凹凸面法兰数据源';let ds=data[sheet],matches=ds.rows.filter(x=>x[1]===val('standard')&&x[2]===val('pressure')&&x[3]===val('dn'));let r=matches.length===1?matches[0]:null;let id=templates[kind]?.[val('type')];let warning=matches.length>1?'数据源中存在重复匹配，不能确定使用哪一行。':'该组合在对应数据源中未找到。';return `<div class="result"><h3>${i?'出口':'进口'} · ${esc(val('standard'))} / ${esc(val('pressure'))} / ${esc(val('dn'))}</h3>${id?`<div class="drawing"><p><strong>原工作簿图形参考</strong> · 部分尺寸已链接，未完成校核和图纸输出</p><div class="drawing-canvas"><img src="images/image${id}.png" alt="${esc(val('face'))} ${esc(val('type'))} 原工作簿图形参考"></div></div>`:''}${r?`<div class="fields">${ds.headers.map((h,j)=>h&&j>=4?`<div class="field"><span>${esc(h)}</span><strong>${esc(r[j]??'未提供')}</strong></div>`:'').join('')}</div>`:`<p>${warning}</p>`}</div>`}).join('')}
+Promise.all(['/api/data','/api/options','/api/drawing-metadata','/api/annotation-bindings'].map(url=>fetch(url).then(r=>{if(!r.ok)throw Error('无法读取 '+url);return r.json()}))).then(([d,o,m,b])=>{data=d;options=o;drawingMetadata=m;annotationBindings=b;init()}).catch(e=>{document.querySelector('#results').textContent='数据加载失败：'+e.message});
+
+
+let renderVersion=0;const baseRender=render;render=function(){baseRender();const version=++renderVersion;for(const [i,tr] of [...tbody.rows].entries()){const val=c=>tr.querySelector('.'+c).value;const params=new URLSearchParams({standard:val('standard'),pressure:val('pressure'),dn:val('dn'),face:val('face'),type:val('type'),insulation:val('insulation')});fetch('/api/lookup?'+params).then(async response=>({ok:response.ok,body:await response.json()})).then(({ok,body})=>{if(version!==renderVersion)return;const result=document.querySelectorAll('#results .result')[i];if(!result)return;const line=document.createElement('p');line.className='calc-note';line.textContent=ok?(body.displayedThickness===null?'厚度计算：此组合尚未实现，请核对原工作簿。':`显示厚度试算：${body.displayedThickness} mm（待核对）`):body.error;result.insertBefore(line,result.querySelector('.fields'));if(ok)drawAnnotations(result,tr,body)}).catch(()=>{})}};
+
+
+function drawAnnotations(result,tr,body){
+ const face=faceKind(tr.querySelector('.face').value),type=tr.querySelector('.type').value;
+ const model=drawingMetadata[face+'|'+type],canvas=result.querySelector('.drawing-canvas');if(!model||!canvas)return;
+ // Keep the overlay anchored even when the browser has cached an older stylesheet.
+ Object.assign(canvas.style,{position:'relative',width:'100%',maxWidth:'650px',margin:'auto',containerType:'inline-size'});
+ if(model.detail){const d=model.detail,c=d.crop,detail=document.createElement('span'),img=document.createElement('img');Object.assign(detail.style,{position:'absolute',overflow:'hidden',left:(d.x*100)+'%',top:(d.y*100)+'%',width:(d.width*100)+'%',height:(d.height*100)+'%'});Object.assign(img.style,{position:'absolute',maxWidth:'none',width:(100/(1-c.left-c.right))+'%',height:(100/(1-c.top-c.bottom))+'%',left:(-100*c.left/(1-c.left-c.right))+'%',top:(-100*c.top/(1-c.top-c.bottom))+'%'});img.src='images/'+d.image;img.alt='环连接槽局部放大图';detail.append(img);canvas.append(detail)}
+ const r=body.row,fmt=(v,prefix='')=>v===null||v===undefined||v===''||v==='—'?null:prefix+v;
+ // The tolerance sheet takes C and f1 from the RF data row, regardless of the drawing face.
+ const rf=data['突面法兰数据源'].rows.filter(x=>x[1]===r[1]&&x[2]===r[2]&&x[3]===r[3]);
+ const number=v=>v===null||v===undefined||v===''||!Number.isFinite(Number(v))?null:Number(v);
+ const dn=number(String(r[3]).replace(/^DN/i,'')),c=rf.length===1?number(rf[0][8]):null,f1=rf.length===1?number(rf[0][11]):null,ring=face==='RJ'?number(r[23]):null;
+ const by=(n,steps)=>n===null?null:[...steps].reverse().find(([threshold])=>n>=threshold)?.[1]??null;
+ const tolerance={
+  '节距':String(r[1]).startsWith('HG')?'0.45~0.55':'0.50~0.56mm',
+  '法兰外径\nD':by(dn,[[0,'±1.5'],[401,'±3.0']]),'法兰螺栓孔中心圆直径\nK':'±0.8',
+  '法兰厚度\nC':by(c,[[0,'+1.0 / 0'],[18.01,'+1.5 / 0'],[50.01,'+2.0 / 0']]),
+  '法兰颈\n(对焊)\nN1':by(dn,[[0,'0 / -1.5'],[501,'0 / -8.0']]),
+  '法兰颈\n(承插焊)\nN2':by(dn,[[0,'+1.0 / 0'],[51,'+2.0 / 0'],[151,'+3.0 / 0']]),
+  '法兰孔径\nB,B1':by(dn,[[0,'+0.5 / 0'],[101,'+1.0 / 0'],[401,'+1.5 / 0'],[700,'+3.0 / 0']]),
+  '承插深度\nT':'±0.25','法兰高度\n(对焊)\nH':by(dn,[[0,'±1.5'],[251,'±3.0']]),
+  '法兰高度\n(承插焊)\nH1':by(dn,[[0,'+1.5 / -1.0'],[300,'+3.0 / -1.0']]),
+  '焊端外径\nA':by(dn,[[0,'+2.0 / 0'],[126,'+4.0 / 0']]),'法兰密封面\nd':'±0.5',
+  '密封面\nf1':by(f1,[[0,'0 / -0.5'],[2.1,'0 / -1.0']]),'密封面f2，f3':'+0.4 / 0',
+  '凸面直径\nX':'0 / -0.5','凹面直径\nY':'+0.5 / 0','环连接槽\nR':by(ring,[[0,'+0.5 / 0'],[2.1,'±0.5']]),
+  '环连接槽\nP':'±0.13','环连接槽深度\nE':'+0.4 / 0','环连接槽宽度\nF':'±0.2'};
+ const labels={};for(const [cell,b] of Object.entries(annotationBindings[face+'|'+type]||{})){if(b.constant!==undefined)labels[cell]=b.constant;else if(b.tolerance){const v=tolerance[b.tolerance];if(v!=null)labels[cell]=v+(b.suffix||'')}else {const v=fmt(r[b.index]);if(v!==null)labels[cell]=(b.prefix||'')+v+(b.suffix||'')}};if(body.displayedThickness!==null)labels[type==='整体法兰'?'H31':'H30']=fmt(body.displayedThickness);
+ if(body.displayedHeight!==null){const cell=face==='RF'?'O30':face==='M'?'M30':'N30';labels[cell]=fmt(body.displayedHeight)}
+ if(type==='整体法兰'&&face==='RF'){labels.I31=fmt(r[10],'φ');labels.J29=fmt(r[11])}
+ if(type==='整体法兰'&&face==='F'){labels.I31=fmt(r[10],'φ');labels.L31=fmt(r[27],'φ');labels.J29=fmt(r[23]);labels.K29=fmt(r[25])}
+ if(type==='整体法兰'&&face==='M'){labels.J31=fmt(r[26],'φ');labels.I29=fmt(r[24])}
+ if(type==='整体法兰'&&face==='RJ'){labels.I31=fmt(r[10],'φ');labels.K31=fmt(r[24],'φ');labels.J29=fmt(r[23]);labels.L29=fmt(r[25]);labels.M29=fmt(r[26]);labels.N29='23°±0.5°'}
+ for(const a of model.annotations){const value=labels[a.cell];if(value==null)continue;const el=document.createElement('span');el.className='drawing-label';Object.assign(el.style,{position:'absolute',display:'flex',alignItems:'center',justifyContent:a.align==='center'?'center':a.align==='left'?'flex-start':'flex-end',textAlign:a.align||'right',left:(a.x*100)+'%',top:(a.y*100)+'%',width:(a.width*100)+'%',height:(a.height*100)+'%',transform:`rotate(${a.rotation||0}deg)`,transformOrigin:'center',whiteSpace:'pre',lineHeight:'0.9',fontSize:a.fontScale?(a.fontScale*100)+'cqw':''});el.textContent=String(value).replace(' / ','\n');canvas.append(el)}
+ const note=document.createElement('p');note.className='calc-note';note.textContent='试验性尺寸链接：仅显示已映射值；部分计算、公差、注释及保温法兰尚未完成。';result.querySelector('.drawing').append(note)
+}
+
+
+document.querySelector('#print-button').addEventListener('click',()=>{const get=id=>document.getElementById(id).value||'—';document.querySelector('#print-meta').textContent=`合同号 ${get('contract')}  ·  泵型号 ${get('model')}  ·  位号 ${get('position')}  ·  零件 ${get('part')}`;window.print()});
+
