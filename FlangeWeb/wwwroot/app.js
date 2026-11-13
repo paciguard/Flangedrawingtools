@@ -63,5 +63,5 @@ function drawAnnotations(result,tr,body){
 }
 
 
-document.querySelector('#print-button').addEventListener('click',()=>{const get=id=>document.getElementById(id).value||'—';document.querySelector('#print-meta').textContent=`合同号 ${get('contract')}  ·  泵型号 ${get('model')}  ·  位号 ${get('position')}  ·  零件 ${get('part')}`;window.print()});
+
 
