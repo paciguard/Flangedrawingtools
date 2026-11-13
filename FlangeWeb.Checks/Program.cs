@@ -33,6 +33,10 @@ if (CombinationRules.GetWorkbookKey("S","PN16","DN20","RF","整体法兰",false,
 if (CombinationRules.GetWorkbookKey("J","PN16","DN20","RF","整体法兰",true,generic,keys,false)!=null) throw new Exception("missing insulation");
 if (CombinationRules.GetWorkbookKey("J","PN16","DN20","RF","整体法兰",true,generic,keys,true)!="JDN20PN16RFIF") throw new Exception("typed IF key");
 if (CombinationRules.GetWorkbookKey("J","PN16","DN20","RF","对焊法兰",true,generic,keys,true)!=null) throw new Exception("insulation WN");
+if (CombinationRules.GetWorkbookKey("HG20615-09-夹套","Class300","DN20","F","整体法兰",true,generic,keys,false)!="HG20615-09-夹套DN20Class300MFIF") throw new Exception("jacket F data should not depend on legacy workbook keys");
+if (CombinationRules.GetWorkbookKey("HG20615-09-夹套","Class300","DN20","RJ","整体法兰",true,generic,keys,false)!="HG20615-09-夹套DN20Class300RJIF") throw new Exception("jacket RJ data should not depend on legacy workbook keys");
+if (CombinationRules.GetWorkbookKey("HG20615-09-夹套","Class300","DN20","M","整体法兰",false,generic,keys,true)!=null) throw new Exception("jacket requires insulation");
+if (CombinationRules.GetWorkbookKey("HG20615-09-夹套","Class300","DN20","F","对焊法兰",true,generic,keys,true)!=null) throw new Exception("jacket IF only");
 Console.WriteLine("PASS workbook key checks");
 
 DefaultHttpContext ShutdownRequest()
