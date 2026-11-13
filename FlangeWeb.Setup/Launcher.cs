@@ -68,10 +68,11 @@ internal static class Launcher
                 var context = new ApplicationContext();
                 using (var menu = new ContextMenuStrip())
                 using (var tray = new NotifyIcon())
+                using (var appIcon = Icon.ExtractAssociatedIcon(Application.ExecutablePath))
                 {
                     menu.Items.Add("打开法兰图纸工具", null, delegate { OpenBrowser(port); });
                     menu.Items.Add("退出", null, delegate { context.ExitThread(); });
-                    tray.Icon = SystemIcons.Application; tray.Text = "法兰图纸生成工具"; tray.ContextMenuStrip = menu; tray.Visible = true;
+                    tray.Icon = appIcon ?? SystemIcons.Application; tray.Text = "法兰图纸生成工具"; tray.ContextMenuStrip = menu; tray.Visible = true;
                     tray.DoubleClick += delegate { OpenBrowser(port); };
                     OpenBrowser(port); Application.Run(context); tray.Visible = false;
                 }

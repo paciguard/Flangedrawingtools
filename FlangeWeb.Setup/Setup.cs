@@ -145,7 +145,12 @@ internal static class Setup
         }
         using (var form = new Form { Text = Product + " - 安装", ClientSize = new Size(540, 205), FormBorderStyle = FormBorderStyle.FixedDialog, MaximizeBox = false, StartPosition = FormStartPosition.CenterScreen })
         {
-            var heading = new Label { Text = "安装法兰图纸生成工具", Left = 18, Top = 15, Width = 500, Font = new Font(SystemFonts.MessageBoxFont, FontStyle.Bold) };
+            var logo = new PictureBox { Left = 18, Top = 9, Width = 44, Height = 44, SizeMode = PictureBoxSizeMode.Zoom };
+            using (Stream iconStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("CflLogo"))
+            {
+                if (iconStream != null) using (var icon = new Icon(iconStream, 256, 256)) { form.Icon = (Icon)icon.Clone(); logo.Image = icon.ToBitmap(); }
+            }
+            var heading = new Label { Text = "安装法兰图纸生成工具", Left = 76, Top = 23, Width = 440, Font = new Font(SystemFonts.MessageBoxFont, FontStyle.Bold) };
             var label = new Label { Text = "安装位置：", Left = 18, Top = 56, Width = 90 };
             var path = new TextBox { Left = 18, Top = 78, Width = 405, Text = DefaultDirectory };
             var browse = new Button { Left = 432, Top = 76, Width = 90, Text = "浏览…" };
@@ -159,7 +164,8 @@ internal static class Setup
                     form.DialogResult = DialogResult.OK; form.Close();
                 } catch (Exception ex) { form.UseWaitCursor = false; install.Enabled = true; MessageBox.Show(ex.Message, "安装失败", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             };
-            form.Controls.AddRange(new Control[] { heading, label, path, browse, desktop, install, cancel }); form.AcceptButton = install; form.CancelButton = cancel; Application.Run(form);
+            form.Controls.AddRange(new Control[] { logo, heading, label, path, browse, desktop, install, cancel }); form.AcceptButton = install; form.CancelButton = cancel; Application.Run(form);
+            if (logo.Image != null) logo.Image.Dispose();
         }
         return 0;
     }

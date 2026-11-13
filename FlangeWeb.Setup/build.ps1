@@ -25,16 +25,18 @@ if (!(Test-Path -LiteralPath (Join-Path $publish 'wwwroot\assets\template-border
 
 $launcher = Join-Path $publish 'FlangeDrawingTool.exe'
 $uninstaller = Join-Path $publish 'FlangeUninstall.exe'
-& $csc /nologo /target:winexe /optimize+ /codepage:65001 "/out:$launcher" /reference:System.Windows.Forms.dll /reference:System.Drawing.dll (Join-Path $setupRoot 'Launcher.cs')
+$icon = Join-Path $workspace 'FlangeWeb\wwwroot\assets\CFL-logo.ico'
+if (!(Test-Path -LiteralPath $icon)) { throw '缺少 CFL 标志图标。' }
+& $csc /nologo /target:winexe /optimize+ /codepage:65001 "/out:$launcher" "/win32icon:$icon" /reference:System.Windows.Forms.dll /reference:System.Drawing.dll (Join-Path $setupRoot 'Launcher.cs')
 if ($LASTEXITCODE -ne 0) { throw '构建启动程序失败。' }
-& $csc /nologo /target:winexe /optimize+ /codepage:65001 "/out:$uninstaller" /reference:System.Windows.Forms.dll /reference:System.Drawing.dll /reference:System.IO.Compression.dll /reference:System.IO.Compression.FileSystem.dll (Join-Path $setupRoot 'Setup.cs')
+& $csc /nologo /target:winexe /optimize+ /codepage:65001 "/out:$uninstaller" "/win32icon:$icon" "/resource:$icon,CflLogo" /reference:System.Windows.Forms.dll /reference:System.Drawing.dll /reference:System.IO.Compression.dll /reference:System.IO.Compression.FileSystem.dll (Join-Path $setupRoot 'Setup.cs')
 if ($LASTEXITCODE -ne 0) { throw '构建卸载程序失败。' }
 
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $archive = Join-Path $work 'FlangePayload.zip'
 [IO.Compression.ZipFile]::CreateFromDirectory($publish, $archive, [IO.Compression.CompressionLevel]::Optimal, $false)
 $installer = Join-Path $output 'FlangeDrawingTool-Setup.exe'
-& $csc /nologo /target:winexe /optimize+ /codepage:65001 "/out:$installer" "/resource:$archive,FlangePayload.zip" /reference:System.Windows.Forms.dll /reference:System.Drawing.dll /reference:System.IO.Compression.dll /reference:System.IO.Compression.FileSystem.dll (Join-Path $setupRoot 'Setup.cs')
+& $csc /nologo /target:winexe /optimize+ /codepage:65001 "/out:$installer" "/win32icon:$icon" "/resource:$icon,CflLogo" "/resource:$archive,FlangePayload.zip" /reference:System.Windows.Forms.dll /reference:System.Drawing.dll /reference:System.IO.Compression.dll /reference:System.IO.Compression.FileSystem.dll (Join-Path $setupRoot 'Setup.cs')
 if ($LASTEXITCODE -ne 0) { throw '构建安装程序失败。' }
 Write-Output "安装程序: $installer"
 
