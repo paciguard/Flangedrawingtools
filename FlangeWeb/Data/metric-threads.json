@@ -1,0 +1,13 @@
+{
+  "standard": "GB/T 196-2025",
+  "description": "普通粗牙内螺纹基本尺寸；基本尺寸不等同于攻丝底孔直径或公差极限",
+  "threads": {
+    "M14": { "nominalDiameter": 14, "pitch": 2, "pitchDiameter": 12.701, "minorDiameter": 11.835 },
+    "M16": { "nominalDiameter": 16, "pitch": 2, "pitchDiameter": 14.701, "minorDiameter": 13.835 },
+    "M20": { "nominalDiameter": 20, "pitch": 2.5, "pitchDiameter": 18.376, "minorDiameter": 17.294 },
+    "M24": { "nominalDiameter": 24, "pitch": 3, "pitchDiameter": 22.051, "minorDiameter": 20.752 },
+    "M27": { "nominalDiameter": 27, "pitch": 3, "pitchDiameter": 25.051, "minorDiameter": 23.752 },
+    "M30": { "nominalDiameter": 30, "pitch": 3.5, "pitchDiameter": 27.727, "minorDiameter": 26.211 },
+    "M33": { "nominalDiameter": 33, "pitch": 3.5, "pitchDiameter": 30.727, "minorDiameter": 29.211 }
+  }
+}
