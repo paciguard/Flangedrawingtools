@@ -1,2 +1,53 @@
-1ëa¡Ò'¾‡¶*'¦Ø¨œ¸§{`¨÷«µ:jÇºá+kŠx8X¥yšt	e+^±¬¢[Ş=«a.+^¦Ø¨Æ¥–)àEæYAÊ×¬Â+aÕªàºg§¶Ã^·
-+‘§zË"±×§‰çu÷mzóMt2'+¢Ê´ú0z´¡zYB¢·…ŠW’ÊË^›_v×¯4×AejxYæÂ…ç$°úè‚¶¦r
+using FlangeWeb;
+using Microsoft.AspNetCore.Http;
+using System.Net;
+void Check(string n, decimal? actual, decimal? expected) { if(actual!=expected) throw new Exception($"{n}: expected {expected}, got {actual}"); Console.WriteLine($"PASS {n}"); }
+Check("PN RF IF", ThicknessRules.Calculate("HG20592-09","PN16","DN20","RF","æ•´ä½“æ³•å…°",20,18,2,2,4,null),18);
+Check("Class RF IF", ThicknessRules.Calculate("HG20615-09","Class150","DN20","RF","æ•´ä½“æ³•å…°",20,18,2,null,null,null),20);
+Check("PN F IF", ThicknessRules.Calculate("HG20592-09","PN16","DN20","F","æ•´ä½“æ³•å…°",20,18,null,2,4,null),16);
+Check("Class F IF", ThicknessRules.Calculate("HG20615-09","Class300","DN20","F","æ•´ä½“æ³•å…°",20,18,null,null,null,null),18);
+Check("PN M IF", ThicknessRules.Calculate("HG20592-09","PN16","DN20","M","æ•´ä½“æ³•å…°",20,18,null,null,4,null),14);
+Check("PN RJ exception", ThicknessRules.Calculate("HG20592-09","PN40","DN125","RJ","æ•´ä½“æ³•å…°",20,18,null,null,null,3),18);
+Check("PN RJ", ThicknessRules.Calculate("HG20592-09","PN40","DN150","RJ","æ•´ä½“æ³•å…°",20,18,null,null,null,3),15);
+Check("missing not zero", ThicknessRules.Calculate("HG20592-09","PN16","DN20","F","æ•´ä½“æ³•å…°",20,18,null,null,null,null),null);
+Check("PN F WN", ThicknessRules.Calculate("HG20592-09","PN16","DN20","F","å¯¹ç„Šæ³•å…°",20,18,null,2,4,null),18);
+Check("Class M WN", ThicknessRules.Calculate("HG20615-09","Class150","DN20","M","å¯¹ç„Šæ³•å…°",20,18,null,null,4,null),24);
+Check("PN M SW", ThicknessRules.Calculate("HG20592-09","PN16","DN20","M","æ‰¿æ’ç„Šæ³•å…°",20,18,null,null,4,null),16);
+Check("PN RJ WN exception", ThicknessRules.Calculate("HG20592-09","PN40","DN125","RJ","å¯¹ç„Šæ³•å…°",20,18,null,null,null,3),20);
+Check("PN RJ SW no exception", ThicknessRules.Calculate("HG20592-09","PN40","DN125","RJ","æ‰¿æ’ç„Šæ³•å…°",20,18,null,null,null,3),17);
+Check("RF Class height", ThicknessRules.Height("HG20615-09","Class150","DN20","RF","å¯¹ç„Šæ³•å…°",30,2,null,null,null),32);
+Check("PN F height", ThicknessRules.Height("HG20592-09","PN16","DN20","F","æ‰¿æ’ç„Šæ³•å…°",30,null,2,null,null),28);
+Check("Class M WN height", ThicknessRules.Height("HG20615-09","Class150","DN20","M","å¯¹ç„Šæ³•å…°",30,null,null,4,null),34);
+Check("PN RJ height uses groove depth", ThicknessRules.Height("HG20592-09","PN40","DN150","RJ","å¯¹ç„Šæ³•å…°",30,null,null,null,5),25);
+Check("PN RJ height missing depth", ThicknessRules.Height("HG20592-09","PN40","DN150","RJ","å¯¹ç„Šæ³•å…°",30,null,null,null,null),null);
+var generic = new HashSet<string>{"S"+"DN20"+"PN16"+"RF"}; var keys = new HashSet<string>(generic){"J"+"DN20"+"PN16"+"RFIF"};
+if (CombinationRules.GetWorkbookKey("S","PN16","DN20","RF","æ•´ä½“æ³•å…°",false,generic,keys,false)!="SDN20PN16RF") throw new Exception("generic key");
+if (CombinationRules.GetWorkbookKey("J","PN16","DN20","RF","æ•´ä½“æ³•å…°",true,generic,keys,false)!=null) throw new Exception("missing insulation");
+if (CombinationRules.GetWorkbookKey("J","PN16","DN20","RF","æ•´ä½“æ³•å…°",true,generic,keys,true)!="JDN20PN16RFIF") throw new Exception("typed IF key");
+if (CombinationRules.GetWorkbookKey("J","PN16","DN20","RF","å¯¹ç„Šæ³•å…°",true,generic,keys,true)!=null) throw new Exception("insulation WN");
+Console.WriteLine("PASS workbook key checks");
+
+DefaultHttpContext ShutdownRequest()
+{
+    var context = new DefaultHttpContext();
+    context.Connection.RemoteIpAddress = IPAddress.Loopback;
+    context.Request.Scheme = "http";
+    context.Request.Host = new HostString("127.0.0.1", 51190);
+    context.Request.ContentType = "application/json";
+    context.Request.Headers.Origin = "http://127.0.0.1:51190";
+    context.Request.Headers["X-Flange-Action"] = "exit";
+    return context;
+}
+var allowed = ShutdownRequest();
+if (!ShutdownPolicy.IsAllowed(allowed)) throw new Exception("local same-origin quit should be allowed");
+var remote = ShutdownRequest(); remote.Connection.RemoteIpAddress = IPAddress.Parse("192.0.2.1");
+if (ShutdownPolicy.IsAllowed(remote)) throw new Exception("remote quit should be rejected");
+var crossOrigin = ShutdownRequest(); crossOrigin.Request.Headers.Origin = "https://example.com";
+if (ShutdownPolicy.IsAllowed(crossOrigin)) throw new Exception("cross-origin quit should be rejected");
+var wrongHost = ShutdownRequest(); wrongHost.Request.Host = new HostString("example.com");
+if (ShutdownPolicy.IsAllowed(wrongHost)) throw new Exception("non-local host should be rejected");
+var noHeader = ShutdownRequest(); noHeader.Request.Headers.Remove("X-Flange-Action");
+if (ShutdownPolicy.IsAllowed(noHeader)) throw new Exception("missing action header should be rejected");
+var formPost = ShutdownRequest(); formPost.Request.ContentType = "text/plain";
+if (ShutdownPolicy.IsAllowed(formPost)) throw new Exception("non-JSON quit should be rejected");
+Console.WriteLine("PASS local quit request validation");

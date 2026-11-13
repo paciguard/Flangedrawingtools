@@ -32,11 +32,18 @@ internal static class Launcher
     private static int Main(string[] args)
     {
         bool checkOnly = args.Length == 1 && args[0] == "--check";
+        bool testRun = args.Length == 2 && args[0] == "--test-run";
+        if (testRun)
+        {
+            string temp = Path.GetFullPath(Path.GetTempPath()).TrimEnd(Path.DirectorySeparatorChar) + Path.DirectorySeparatorChar;
+            if (!Path.GetFullPath(args[1]).StartsWith(temp, StringComparison.OrdinalIgnoreCase)) return 1;
+        }
         Application.EnableVisualStyles();
         bool isNew;
-        using (var mutex = new Mutex(true, "Local\\FlangeDrawingTool-Launcher", out isNew))
+        string mutexName = testRun ? "Local\\FlangeDrawingTool-Test-" + Process.GetCurrentProcess().Id : "Local\\FlangeDrawingTool-Launcher";
+        using (var mutex = new Mutex(true, mutexName, out isNew))
         {
-            if (!isNew && !checkOnly)
+            if (!isNew && !checkOnly && !testRun)
             {
                 try { int existing = int.Parse(File.ReadAllText(StateFile)); if (Healthy(existing)) { OpenBrowser(existing); return 0; } }
                 catch { }
@@ -63,30 +70,38 @@ internal static class Launcher
                 }
                 if (!ready) throw new InvalidOperationException("本地服务未能启动，请检查安装目录和端口权限。");
                 if (checkOnly) return 0;
-                Directory.CreateDirectory(Path.GetDirectoryName(StateFile));
-                File.WriteAllText(StateFile, port.ToString());
+                if (testRun) File.WriteAllText(args[1], port.ToString());
+                else { Directory.CreateDirectory(Path.GetDirectoryName(StateFile)); File.WriteAllText(StateFile, port.ToString()); }
                 var context = new ApplicationContext();
                 using (var menu = new ContextMenuStrip())
                 using (var tray = new NotifyIcon())
                 using (var appIcon = Icon.ExtractAssociatedIcon(Application.ExecutablePath))
+                using (var dispatcher = new Control())
                 {
+                    var handle = dispatcher.Handle;
+                    server.EnableRaisingEvents = true;
+                    server.Exited += delegate {
+                        try { if (!dispatcher.IsDisposed) dispatcher.BeginInvoke((Action)delegate { context.ExitThread(); }); }
+                        catch (InvalidOperationException) { }
+                    };
+                    if (server.HasExited) dispatcher.BeginInvoke((Action)delegate { context.ExitThread(); });
                     menu.Items.Add("打开法兰图纸工具", null, delegate { OpenBrowser(port); });
                     menu.Items.Add("退出", null, delegate { context.ExitThread(); });
-                    tray.Icon = appIcon ?? SystemIcons.Application; tray.Text = "法兰图纸生成工具"; tray.ContextMenuStrip = menu; tray.Visible = true;
+                    tray.Icon = appIcon ?? SystemIcons.Application; tray.Text = "法兰图纸生成工具"; tray.ContextMenuStrip = menu; tray.Visible = !testRun;
                     tray.DoubleClick += delegate { OpenBrowser(port); };
-                    OpenBrowser(port); Application.Run(context); tray.Visible = false;
+                    if (!testRun) OpenBrowser(port); Application.Run(context); tray.Visible = false;
                 }
                 return 0;
             }
             catch (Exception ex)
             {
-                if (!checkOnly) MessageBox.Show(ex.Message, "无法启动法兰图纸工具", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (!checkOnly && !testRun) MessageBox.Show(ex.Message, "无法启动法兰图纸工具", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return 1;
             }
             finally
             {
                 if (server != null) { try { if (!server.HasExited) server.Kill(); } catch { } server.Dispose(); }
-                if (!checkOnly) { try { if (File.Exists(StateFile)) File.Delete(StateFile); } catch { } }
+                if (!checkOnly && !testRun) { try { if (File.Exists(StateFile)) File.Delete(StateFile); } catch { } }
                 if (isNew) mutex.ReleaseMutex();
             }
         }

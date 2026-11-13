@@ -18,6 +18,10 @@ internal static class Setup
     private static string DefaultDirectory { get { return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Programs", "FlangeDrawingTool"); } }
     private static string ProgramDirectory { get { return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), "法兰图纸生成工具"); } }
     private static string ShortcutName { get { return Product + ".lnk"; } }
+    private static void ConfigureCancel(Form form, Button cancel)
+    {
+        cancel.Click += delegate { form.Close(); };
+    }
     private static string FullTarget(string root, string relative)
     {
         string basePath = Path.GetFullPath(root).TrimEnd(Path.DirectorySeparatorChar) + Path.DirectorySeparatorChar;
@@ -203,6 +207,7 @@ internal static class Setup
             var desktop = new CheckBox { Left = 18, Top = 115, Width = 240, Text = "创建桌面快捷方式", Checked = true };
             var install = new Button { Left = 336, Top = 153, Width = 90, Text = "安装" };
             var cancel = new Button { Left = 432, Top = 153, Width = 90, Text = "取消", DialogResult = DialogResult.Cancel };
+            ConfigureCancel(form, cancel);
             browse.Click += delegate { using (var dialog = new FolderBrowserDialog()) { dialog.Description = "选择空的安装目录"; if (dialog.ShowDialog(form) == DialogResult.OK) path.Text = dialog.SelectedPath; } };
             install.Click += delegate {
                 try { install.Enabled = false; form.UseWaitCursor = true; Application.DoEvents(); Install(path.Text, true, desktop.Checked); form.UseWaitCursor = false;

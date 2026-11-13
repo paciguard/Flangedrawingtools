@@ -21,6 +21,25 @@ try {
     $exe = Join-Path $testRoot 'setup-test.exe'
     & $csc /nologo /target:winexe /codepage:65001 "/out:$exe" "/resource:$archive,FlangePayload.zip" /reference:System.Windows.Forms.dll /reference:System.Drawing.dll /reference:System.IO.Compression.dll /reference:System.IO.Compression.FileSystem.dll (Join-Path $SetupRoot 'Setup.cs')
     if ($LASTEXITCODE -ne 0) { throw 'Test installer compilation failed.' }
+    $cancelSource = Join-Path $testRoot 'CancelTest.cs'
+    @'
+using System; using System.Reflection; using System.Windows.Forms;
+internal static class CancelTest {
+    [STAThread] public static int Main() {
+        try {
+            var form = new Form(); var button = new Button(); form.Controls.Add(button);
+            typeof(Setup).GetMethod("ConfigureCancel", BindingFlags.NonPublic | BindingFlags.Static).Invoke(null, new object[] { form, button });
+            typeof(Button).GetMethod("OnClick", BindingFlags.Instance | BindingFlags.NonPublic).Invoke(button, new object[] { EventArgs.Empty });
+            return form.IsDisposed ? 0 : 2;
+        } catch { return 1; }
+    }
+}
+'@ | Set-Content -LiteralPath $cancelSource -Encoding utf8
+    $cancelExe = Join-Path $testRoot 'cancel-test.exe'
+    & $csc /nologo /target:winexe /codepage:65001 /main:CancelTest "/out:$cancelExe" /reference:System.Windows.Forms.dll /reference:System.Drawing.dll /reference:System.IO.Compression.dll /reference:System.IO.Compression.FileSystem.dll (Join-Path $SetupRoot 'Setup.cs') $cancelSource
+    if ($LASTEXITCODE -ne 0) { throw 'Cancel test compilation failed.' }
+    $cancelProcess = Start-Process -FilePath $cancelExe -WindowStyle Hidden -Wait -PassThru
+    if ($cancelProcess.ExitCode -ne 0) { throw 'Cancel did not close the installer window.' }
     function RunSetup([string]$operation, [string]$target) {
         $process = Start-Process -FilePath $exe -ArgumentList @($operation, ('"' + $target + '"')) -WindowStyle Hidden -Wait -PassThru
         return $process.ExitCode
@@ -39,7 +58,7 @@ try {
         if ((RunSetup '--test-install' $one) -ne 1) { throw 'Update should fail while a file is locked.' }
         if ([IO.File]::ReadAllText($first) -ne 'sentinel') { throw 'Update changed a file before detecting the lock.' }
     } finally { $lock.Dispose() }
-    Write-Output 'PASS running update, other installation preservation, and locked-file preflight'
+    Write-Output 'PASS Cancel, running update, other installation preservation, and locked-file preflight'
 } finally {
     foreach ($process in $servers) { try { $process.Refresh(); if (!$process.HasExited) { Stop-Process -Id $process.Id -Force } } catch { } }
     $resolved = (Resolve-Path -LiteralPath $testRoot).ProviderPath
